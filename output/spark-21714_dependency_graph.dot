@@ -1,0 +1,29 @@
+// Service Dependency Graph
+digraph {
+	rankdir=LR
+	node [fillcolor=lightblue shape=box style="rounded,filled"]
+	Spark [label=Spark]
+	HDFS [label=HDFS]
+	Spark -> HDFS [label="op_a: upload
+ts_a: 25/08/04 03:29:46
+op_b: store
+ts_b: 25/08/04 03:29:46
+res: hdfs://localhost:9000/user/wenbo/.sparkStaging/application_1754278069252_0001/__spark_libs__1333687441174363964.zip"]
+	YARN [label=YARN]
+	Spark -> YARN [label="op_a: request
+ts_a: 25/08/04 03:29:44
+op_b: provide_application
+ts_b: 25/08/04 03:29:44
+res: application"]
+	Spark -> YARN [label="op_a: submit
+ts_a: 25/08/04 03:29:47
+op_b: accept_submission
+ts_b: 25/08/04 03:29:47
+res: application_1754278069252_0001"]
+	"Hive Metastore" [label="Hive Metastore"]
+	Spark -> "Hive Metastore" [label="op_a: initialize
+ts_a: 25/08/04 03:29:57
+op_b: open_store
+ts_b: 25/08/04 03:29:57
+res: MetastoreConnection"]
+}

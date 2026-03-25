@@ -1,0 +1,122 @@
+[
+  {
+    "service_a": {
+      "value": "Spark",
+      "regex": ".*INFO yarn.Client: Uploading resource.*",
+      "line": "62"
+    },
+    "operation_a": {
+      "value": "upload",
+      "regex": ".*INFO yarn.Client: Uploading resource.*",
+      "line": "62",
+      "timestamp": "25/08/04 03:29:46"
+    },
+    "service_b": {
+      "value": "HDFS",
+      "regex": ".*hdfs://localhost:9000/user/.*",
+      "line": "62"
+    },
+    "operation_b": {
+      "value": "store",
+      "regex": ".*hdfs://localhost:9000/user/.*",
+      "line": "62",
+      "timestamp": "25/08/04 03:29:46"
+    },
+    "resource": {
+      "value": "hdfs://localhost:9000/user/wenbo/.sparkStaging/application_1754278069252_0001/__spark_libs__1333687441174363964.zip",
+      "regex": ".*hdfs://localhost:9000/user/.*",
+      "line": "62",
+      "timestamp": "25/08/04 03:29:46"
+    }
+  },
+  {
+    "service_a": {
+      "value": "Spark",
+      "regex": ".*INFO yarn.Client: Requesting a new application from cluster.*",
+      "line": "55"
+    },
+    "operation_a": {
+      "value": "request",
+      "regex": ".*INFO yarn.Client: Requesting a new application from cluster.*",
+      "line": "55",
+      "timestamp": "25/08/04 03:29:44"
+    },
+    "service_b": {
+      "value": "YARN",
+      "regex": ".*Connecting to ResourceManager.*",
+      "line": "54"
+    },
+    "operation_b": {
+      "value": "provide_application",
+      "regex": ".*Connecting to ResourceManager.*",
+      "line": "54",
+      "timestamp": "25/08/04 03:29:44"
+    },
+    "resource": {
+      "value": "application",
+      "regex": ".*INFO yarn.Client: Requesting a new application from cluster.*",
+      "line": "55",
+      "timestamp": "25/08/04 03:29:44"
+    }
+  },
+  {
+    "service_a": {
+      "value": "Spark",
+      "regex": ".*INFO yarn.Client: Submitting application application_\\d+ to ResourceManager.*",
+      "line": "69"
+    },
+    "operation_a": {
+      "value": "submit",
+      "regex": ".*INFO yarn.Client: Submitting application application_\\d+ to ResourceManager.*",
+      "line": "69",
+      "timestamp": "25/08/04 03:29:47"
+    },
+    "service_b": {
+      "value": "YARN",
+      "regex": ".*INFO impl.YarnClientImpl: Submitted application application_\\d+.*",
+      "line": "70"
+    },
+    "operation_b": {
+      "value": "accept_submission",
+      "regex": ".*INFO impl.YarnClientImpl: Submitted application application_\\d+.*",
+      "line": "70",
+      "timestamp": "25/08/04 03:29:47"
+    },
+    "resource": {
+      "value": "application_1754278069252_0001",
+      "regex": ".*application_1754278069252_0001.*",
+      "line": "69",
+      "timestamp": "25/08/04 03:29:47"
+    }
+  },
+  {
+    "service_a": {
+      "value": "Spark",
+      "regex": ".*INFO hive.HiveUtils: Initializing HiveMetastoreConnection.*",
+      "line": "122"
+    },
+    "operation_a": {
+      "value": "initialize",
+      "regex": ".*INFO hive.HiveUtils: Initializing HiveMetastoreConnection.*",
+      "line": "122",
+      "timestamp": "25/08/04 03:29:57"
+    },
+    "service_b": {
+      "value": "Hive Metastore",
+      "regex": ".*INFO metastore.HiveMetaStore: 0: Opening raw store with implementation class:org.apache.hadoop.hive.metastore.ObjectStore.*",
+      "line": "123"
+    },
+    "operation_b": {
+      "value": "open_store",
+      "regex": ".*INFO metastore.HiveMetaStore: 0: Opening raw store with implementation class:org.apache.hadoop.hive.metastore.ObjectStore.*",
+      "line": "123",
+      "timestamp": "25/08/04 03:29:57"
+    },
+    "resource": {
+      "value": "MetastoreConnection",
+      "regex": ".*INFO hive.HiveUtils: Initializing HiveMetastoreConnection.*",
+      "line": "122",
+      "timestamp": "25/08/04 03:29:57"
+    }
+  }
+]
