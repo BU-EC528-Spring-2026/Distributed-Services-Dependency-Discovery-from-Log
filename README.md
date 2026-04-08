@@ -31,11 +31,11 @@ Output files are written to `output/`:
 
 ## Example (`log/spark-21714.log`)
 
-**Dependency graph** (`output/spark-21714_dependency_graph.png`):
+**Dependency graph** (`output/SPARK-22713/dependency_graph.png`):
 
-![spark-21714 dependency graph](output/spark-21714_dependency_graph.png)
+![spark-21714 dependency graph](output/SPARK-22713/dependency_graph.png)
 
-**Extracted interactions** (`output/spark-21714_interactions.json`):
+**Extracted interactions** (`output/SPARK-22713/interactions.json`):
 
 | service_a | op_a | ts_a | service_b | op_b | ts_b | resource |
 |-----------|------|------|-----------|------|------|----------|
