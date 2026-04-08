@@ -1,0 +1,49 @@
+[
+  {
+    "symptom_type": "error_exception",
+    "service": "Executor",
+    "event": "Exception in task 16.0 in stage 1.0 (TID 93)",
+    "regex": "Exception in task \\d+\\.\\d+ in stage \\d+\\.\\d+ \\(TID \\d+\\)",
+    "line": "162",
+    "timestamp": "25/06/05 21:12:46"
+  },
+  {
+    "symptom_type": "abnormal_execution_time",
+    "service": "Spark",
+    "event": "Futures timed out after [10 seconds]",
+    "duration": "10 seconds",
+    "regex": "Futures timed out after \\[\\d+ seconds\\]",
+    "line": "166",
+    "timestamp": "25/06/05 21:12:25"
+  },
+  {
+    "symptom_type": "excessive_resource_usage",
+    "service": "MemoryStore",
+    "event": "Not enough space to cache rdd_5_21 in memory",
+    "resource_type": "memory",
+    "usage_value": "278.5 MB",
+    "regex": "Not enough space to cache rdd_5_21 in memory",
+    "line": "30",
+    "timestamp": "25/06/05 21:02:31"
+  },
+  {
+    "symptom_type": "excessive_resource_usage",
+    "service": "MemoryStore",
+    "event": "Not enough space to cache rdd_5_24 in memory",
+    "resource_type": "memory",
+    "usage_value": "278.5 MB",
+    "regex": "Not enough space to cache rdd_5_24 in memory",
+    "line": "45",
+    "timestamp": "25/06/05 21:02:31"
+  },
+  {
+    "symptom_type": "excessive_resource_usage",
+    "service": "MemoryStore",
+    "event": "Not enough space to cache rdd_5_23 in memory",
+    "resource_type": "memory",
+    "usage_value": "278.5 MB",
+    "regex": "Not enough space to cache rdd_5_23 in memory",
+    "line": "60",
+    "timestamp": "25/06/05 21:02:31"
+  }
+]

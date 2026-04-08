@@ -1,0 +1,39 @@
+{
+  "template_name": "excessive_resource_usage",
+  "symptom_type": "excessive_resource_usage",
+  "description": "A service consuming abnormally high memory, CPU, disk, or network resources, or a resource limit being reached/exceeded.",
+  "fields": {
+    "symptom_type": {
+      "value": "excessive_resource_usage",
+      "description": "Fixed value identifying the symptom category"
+    },
+    "service": {
+      "value": "UNKNOWN",
+      "description": "The service or component exhibiting excessive resource usage"
+    },
+    "event": {
+      "value": "UNKNOWN",
+      "description": "Brief description of the resource overuse event"
+    },
+    "resource_type": {
+      "value": "UNKNOWN",
+      "description": "Type of resource involved (memory, CPU, disk, network, threads, etc.)"
+    },
+    "usage_value": {
+      "value": "UNKNOWN",
+      "description": "The excessive usage amount or threshold mentioned in the log (e.g. '95% memory', '8GB')"
+    },
+    "regex": {
+      "value": "UNKNOWN",
+      "description": "Python regex pattern matching the log line that shows the resource overuse"
+    },
+    "line": {
+      "value": "UNKNOWN",
+      "description": "Line number in the log file"
+    },
+    "timestamp": {
+      "value": "UNKNOWN",
+      "description": "Timestamp of the event extracted from the log line"
+    }
+  }
+}

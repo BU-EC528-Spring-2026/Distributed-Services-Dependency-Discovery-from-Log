@@ -1,0 +1,35 @@
+{
+  "template_name": "abnormal_execution_time",
+  "symptom_type": "abnormal_execution_time",
+  "description": "A task, stage, or operation that takes abnormally long to complete, times out, or shows slow execution warnings.",
+  "fields": {
+    "symptom_type": {
+      "value": "abnormal_execution_time",
+      "description": "Fixed value identifying the symptom category"
+    },
+    "service": {
+      "value": "UNKNOWN",
+      "description": "The service or component experiencing the slow/timeout event"
+    },
+    "event": {
+      "value": "UNKNOWN",
+      "description": "Brief description of the slow or timed-out operation"
+    },
+    "duration": {
+      "value": "UNKNOWN",
+      "description": "Observed duration or delay value mentioned in the log (e.g. '120s', '5000 ms')"
+    },
+    "regex": {
+      "value": "UNKNOWN",
+      "description": "Python regex pattern matching the log line that contains the timing anomaly"
+    },
+    "line": {
+      "value": "UNKNOWN",
+      "description": "Line number in the log file"
+    },
+    "timestamp": {
+      "value": "UNKNOWN",
+      "description": "Timestamp of the event extracted from the log line"
+    }
+  }
+}

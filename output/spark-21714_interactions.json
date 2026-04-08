@@ -2,29 +2,29 @@
   {
     "service_a": {
       "value": "Spark",
-      "regex": "INFO spark\\.SparkContext: Submitted application: SPARK-21714-HiveTest",
+      "regex": "INFO spark.SparkContext: Submitted application: SPARK-21714-HiveTest",
       "line": "8"
     },
     "operation_a": {
-      "value": "submit",
-      "regex": "INFO spark\\.SparkContext: Submitted application: SPARK-21714-HiveTest",
+      "value": "Submit application",
+      "regex": "INFO spark.SparkContext: Submitted application:",
       "line": "8",
       "timestamp": "25/08/04 03:29:43"
     },
     "service_b": {
       "value": "YARN",
-      "regex": "INFO yarn\\.Client: Requesting a new application from cluster with 1 NodeManagers",
+      "regex": "INFO yarn.Client: Requesting a new application from cluster",
       "line": "55"
     },
     "operation_b": {
-      "value": "request application",
-      "regex": "INFO yarn\\.Client: Requesting a new application from cluster with 1 NodeManagers",
+      "value": "Request application",
+      "regex": "INFO yarn.Client: Requesting a new application from cluster",
       "line": "55",
       "timestamp": "25/08/04 03:29:44"
     },
     "resource": {
-      "value": "application",
-      "regex": "INFO yarn\\.Client: Requesting a new application from cluster with 1 NodeManagers",
+      "value": "YARN application",
+      "regex": "INFO yarn.Client: Requesting a new application from cluster",
       "line": "55",
       "timestamp": "25/08/04 03:29:44"
     }
@@ -32,29 +32,29 @@
   {
     "service_a": {
       "value": "Spark",
-      "regex": "INFO yarn\\.Client: Uploading resource file:/tmp/spark-.*\\.zip -> hdfs://localhost:9000/user/wenbo/\\.sparkStaging/application_1754278069252_0001/.*\\.zip",
+      "regex": "Uploading resource file:.*__spark_libs__.*",
       "line": "62"
     },
     "operation_a": {
-      "value": "upload resource",
-      "regex": "INFO yarn\\.Client: Uploading resource file:/tmp/spark-.*\\.zip -> hdfs://localhost:9000/user/wenbo/\\.sparkStaging/application_1754278069252_0001/.*\\.zip",
+      "value": "Upload resource",
+      "regex": "Uploading resource file:.*__spark_libs__.*",
       "line": "62",
       "timestamp": "25/08/04 03:29:46"
     },
     "service_b": {
       "value": "HDFS",
-      "regex": "hdfs://localhost:9000/user/wenbo/\\.sparkStaging/application_1754278069252_0001/.*\\.zip",
+      "regex": "-> hdfs://localhost:9000/user/wenbo/.sparkStaging/application_.*",
       "line": "62"
     },
     "operation_b": {
-      "value": "store resource",
-      "regex": "hdfs://localhost:9000/user/wenbo/\\.sparkStaging/application_1754278069252_0001/.*\\.zip",
+      "value": "Store resource",
+      "regex": "-> hdfs://localhost:9000/user/wenbo/.sparkStaging/application_.*",
       "line": "62",
       "timestamp": "25/08/04 03:29:46"
     },
     "resource": {
-      "value": "resource file",
-      "regex": "hdfs://localhost:9000/user/wenbo/\\.sparkStaging/application_1754278069252_0001/.*\\.zip",
+      "value": "Spark resources",
+      "regex": "-> hdfs://localhost:9000/user/wenbo/.sparkStaging/application_.*",
       "line": "62",
       "timestamp": "25/08/04 03:29:46"
     }
@@ -62,31 +62,61 @@
   {
     "service_a": {
       "value": "Spark",
-      "regex": "INFO hive\\.HiveUtils: Initializing HiveMetastoreConnection version 1\\.2\\.1 using Spark classes\\.",
-      "line": "122"
+      "regex": "INFO yarn.Client: Submitting application application_",
+      "line": "69"
     },
     "operation_a": {
-      "value": "initialize",
-      "regex": "INFO hive\\.HiveUtils: Initializing HiveMetastoreConnection version 1\\.2\\.1 using Spark classes\\.",
-      "line": "122",
-      "timestamp": "25/08/04 03:29:57"
+      "value": "Submit application",
+      "regex": "INFO yarn.Client: Submitting application application_",
+      "line": "69",
+      "timestamp": "25/08/04 03:29:47"
+    },
+    "service_b": {
+      "value": "YARN",
+      "regex": "INFO impl.YarnClientImpl: Submitted application application_",
+      "line": "70"
+    },
+    "operation_b": {
+      "value": "Accept application",
+      "regex": "INFO impl.YarnClientImpl: Submitted application application_",
+      "line": "70",
+      "timestamp": "25/08/04 03:29:47"
+    },
+    "resource": {
+      "value": "YARN application",
+      "regex": "application application_",
+      "line": "69",
+      "timestamp": "25/08/04 03:29:47"
+    }
+  },
+  {
+    "service_a": {
+      "value": "Spark",
+      "regex": "INFO internal.SharedState: Setting hive.metastore.warehouse.dir",
+      "line": "115"
+    },
+    "operation_a": {
+      "value": "Set Hive warehouse dir",
+      "regex": "INFO internal.SharedState: Setting hive.metastore.warehouse.dir",
+      "line": "115",
+      "timestamp": "25/08/04 03:29:56"
     },
     "service_b": {
       "value": "Hive",
-      "regex": "INFO metastore\\.HiveMetaStore: 0: Opening raw store with implemenation class:org\\.apache\\.hadoop\\.hive\\.metastore\\.ObjectStore",
-      "line": "123"
+      "regex": "INFO hive.HiveUtils: Initializing HiveMetastoreConnection",
+      "line": "122"
     },
     "operation_b": {
-      "value": "open connection",
-      "regex": "INFO metastore\\.HiveMetaStore: 0: Opening raw store with implemenation class:org\\.apache\\.hadoop\\.hive\\.metastore\\.ObjectStore",
-      "line": "123",
+      "value": "Initialize Metastore Connection",
+      "regex": "INFO hive.HiveUtils: Initializing HiveMetastoreConnection",
+      "line": "122",
       "timestamp": "25/08/04 03:29:57"
     },
     "resource": {
-      "value": "Hive Metastore",
-      "regex": "INFO hive\\.HiveUtils: Initializing HiveMetastoreConnection version 1\\.2\\.1 using Spark classes\\.",
-      "line": "122",
-      "timestamp": "25/08/04 03:29:57"
+      "value": "Hive warehouse directory",
+      "regex": "/user/hive/warehouse",
+      "line": "116",
+      "timestamp": "25/08/04 03:29:56"
     }
   }
 ]

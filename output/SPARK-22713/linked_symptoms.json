@@ -1,0 +1,42 @@
+[
+  {
+    "symptom_type": "error_exception",
+    "symptom_event": "Exception in task 16.0 in stage 1.0 (TID 93)",
+    "symptom_service": "Executor",
+    "linked_service_a": "YARN",
+    "linked_service_b": "Spark",
+    "reason": "The exception is likely related to the executor launched in the interaction between YARN and Spark."
+  },
+  {
+    "symptom_type": "abnormal_execution_time",
+    "symptom_event": "Futures timed out after [10 seconds]",
+    "symptom_service": "Spark",
+    "linked_service_a": "YARN",
+    "linked_service_b": "Spark",
+    "reason": "The timeout issue in Spark is linked to the interaction where YARN launched an executor for Spark, possibly affecting its operation."
+  },
+  {
+    "symptom_type": "excessive_resource_usage",
+    "symptom_event": "Not enough space to cache rdd_5_21 in memory",
+    "symptom_service": "MemoryStore",
+    "linked_service_a": "YARN",
+    "linked_service_b": "RMAppManager",
+    "reason": "The memory issue is linked to the application resource allocation, starting from the application submission by YARN."
+  },
+  {
+    "symptom_type": "excessive_resource_usage",
+    "symptom_event": "Not enough space to cache rdd_5_24 in memory",
+    "symptom_service": "MemoryStore",
+    "linked_service_a": "YARN",
+    "linked_service_b": "RMAppManager",
+    "reason": "The memory issue is tied to the overall application resource management initiated during the application submission."
+  },
+  {
+    "symptom_type": "excessive_resource_usage",
+    "symptom_event": "Not enough space to cache rdd_5_23 in memory",
+    "symptom_service": "MemoryStore",
+    "linked_service_a": "YARN",
+    "linked_service_b": "RMAppManager",
+    "reason": "The excessive memory usage is linked to the container allocation process during the application's management handled by YARN."
+  }
+]

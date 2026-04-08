@@ -4,21 +4,26 @@ digraph {
 	node [fillcolor=lightblue shape=box style="rounded,filled"]
 	Spark [label=Spark]
 	YARN [label=YARN]
-	Spark -> YARN [label="op_a: submit
+	Spark -> YARN [label="op_a: Submit application
 ts_a: 25/08/04 03:29:43
-op_b: request application
+op_b: Request application
 ts_b: 25/08/04 03:29:44
-res: application"]
+res: YARN application"]
 	HDFS [label=HDFS]
-	Spark -> HDFS [label="op_a: upload resource
+	Spark -> HDFS [label="op_a: Upload resource
 ts_a: 25/08/04 03:29:46
-op_b: store resource
+op_b: Store resource
 ts_b: 25/08/04 03:29:46
-res: resource file"]
+res: Spark resources"]
+	Spark -> YARN [label="op_a: Submit application
+ts_a: 25/08/04 03:29:47
+op_b: Accept application
+ts_b: 25/08/04 03:29:47
+res: YARN application"]
 	Hive [label=Hive]
-	Spark -> Hive [label="op_a: initialize
-ts_a: 25/08/04 03:29:57
-op_b: open connection
+	Spark -> Hive [label="op_a: Set Hive warehouse dir
+ts_a: 25/08/04 03:29:56
+op_b: Initialize Metastore Connection
 ts_b: 25/08/04 03:29:57
-res: Hive Metastore"]
+res: Hive warehouse directory"]
 }

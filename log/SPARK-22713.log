@@ -1,0 +1,683 @@
+25/06/05 21:02:08 INFO ResourceManager: Received application submission: application_1749157329_0001 (PageRank)
+25/06/05 21:02:08 INFO ResourceManager: User cc submitted application application_1749157329_0001
+25/06/05 21:02:08 INFO RMAppManager: Application application_1749157329_0001 is submitted with queue default
+25/06/05 21:02:08 INFO ResourceScheduler: Added application attempt appattempt_1749157329_0001_000001 to scheduler
+
+25/06/05 21:02:09 INFO ResourceScheduler: Allocating container container_1749157329_0001_01_000001 for application attempt appattempt_1749157329_0001_000001
+25/06/05 21:02:09 INFO ResourceScheduler: Container container_1749157329_0001_01_000001 allocated with resource <memory:6656MB, vCores:1>
+25/06/05 21:02:09 INFO RMContainerAllocator: Assigned container_1749157329_0001_01_000001 to node localhost:8041
+25/06/05 21:02:09 INFO ResourceManager: Container resource allocation completed for application_1749157329_0001
+25/06/05 21:02:09 INFO Executor: Starting executor ID driver on host localhost
+25/06/05 21:02:09 DEBUG TransportServer: Shuffle server started on port: 40315
+25/06/05 21:02:09 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 40315.
+25/06/05 21:02:09 INFO NettyBlockTransferService: Server created on 10.52.2.86:40315
+25/06/05 21:02:09 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.52.2.86, 40315, None)
+25/06/05 21:02:09 INFO BlockManagerMasterEndpoint: Registering block manager 10.52.2.86:40315 with 8.4 GB RAM, BlockManagerId(driver, 10.52.2.86, 40315, None)
+25/06/05 21:02:09 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.52.2.86, 40315, None)
+
+25/06/05 21:02:09 INFO ResourceScheduler: Allocating container container_1749157329_0001_01_000001 for application attempt appattempt_1749157329_0001_000001
+25/06/05 21:02:09 INFO ResourceScheduler: Container container_1749157329_0001_01_000001 allocated with resource <memory:6656MB, vCores:1>
+25/06/05 21:02:09 INFO RMContainerAllocator: Assigned container_1749157329_0001_01_000001 to node localhost:8041
+25/06/05 21:02:09 INFO ResourceManager: Container resource allocation completed for application_1749157329_0001
+25/06/05 21:02:09 INFO Executor: Starting executor ID driver on host localhost
+25/06/05 21:02:09 DEBUG TransportServer: Shuffle server started on port: 40315
+25/06/05 21:02:09 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 40315.
+25/06/05 21:02:09 INFO NettyBlockTransferService: Server created on 10.52.2.86:40315
+25/06/05 21:02:09 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.52.2.86, 40315, None)
+25/06/05 21:02:09 INFO BlockManagerMasterEndpoint: Registering block manager 10.52.2.86:40315 with 8.4 GB RAM, BlockManagerId(driver, 10.52.2.86, 40315, None)
+25/06/05 21:02:09 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.52.2.86, 40315, None)
+
+25/06/05 21:02:31 WARN MemoryStore: Not enough space to cache rdd_5_21 in memory! (computed 90.2 MB so far)
+25/06/05 21:02:31 INFO MemoryStore: Memory use = 168.3 KB (blocks) + 278.3 MB (scratch space shared across 3 tasks(s)) = 278.5 MB. Storage limit = 278.5 MB.
+25/06/05 21:02:31 WARN BlockManager: Block rdd_5_21 could not be removed as it was not found on disk or in memory
+25/06/05 21:02:31 WARN BlockManager: Putting block rdd_5_21 failed
+25/06/05 21:02:31 DEBUG BlockManager: Putting block rdd_5_21 without replication took  5687 ms
+25/06/05 21:02:31 DEBUG BlockManager: Getting local block rdd_5_21
+25/06/05 21:02:31 DEBUG BlockManager: Block rdd_5_21 was not found
+25/06/05 21:02:31 DEBUG BlockManager: Getting remote block rdd_5_21
+25/06/05 21:02:31 DEBUG BlockManager: Block rdd_5_21 not found
+25/06/05 21:02:31 DEBUG MapOutputTrackerMaster: Fetching outputs for shuffle 2, partitions 21-22
+25/06/05 21:02:31 DEBUG ShuffleBlockFetcherIterator: maxBytesInFlight: 50331648, targetRequestSize: 10066329
+25/06/05 21:02:31 INFO ShuffleBlockFetcherIterator: Getting 77 non-empty blocks out of 77 blocks
+25/06/05 21:02:31 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/06/05 21:02:31 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  1 ms
+25/06/05 21:02:31 INFO MemoryStore: Will not store rdd_5_24
+25/06/05 21:02:31 WARN MemoryStore: Not enough space to cache rdd_5_24 in memory! (computed 58.4 MB so far)
+25/06/05 21:02:31 INFO MemoryStore: Memory use = 168.3 KB (blocks) + 278.3 MB (scratch space shared across 3 tasks(s)) = 278.5 MB. Storage limit = 278.5 MB.
+25/06/05 21:02:31 WARN BlockManager: Block rdd_5_24 could not be removed as it was not found on disk or in memory
+25/06/05 21:02:31 WARN BlockManager: Putting block rdd_5_24 failed
+25/06/05 21:02:31 DEBUG BlockManager: Putting block rdd_5_24 without replication took  5705 ms
+25/06/05 21:02:31 DEBUG BlockManager: Getting local block rdd_5_24
+25/06/05 21:02:31 DEBUG BlockManager: Block rdd_5_24 was not found
+25/06/05 21:02:31 DEBUG BlockManager: Getting remote block rdd_5_24
+25/06/05 21:02:31 DEBUG BlockManager: Block rdd_5_24 not found
+25/06/05 21:02:31 DEBUG MapOutputTrackerMaster: Fetching outputs for shuffle 2, partitions 24-25
+25/06/05 21:02:31 DEBUG ShuffleBlockFetcherIterator: maxBytesInFlight: 50331648, targetRequestSize: 10066329
+25/06/05 21:02:31 INFO ShuffleBlockFetcherIterator: Getting 77 non-empty blocks out of 77 blocks
+25/06/05 21:02:31 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/06/05 21:02:31 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  1 ms
+25/06/05 21:02:31 INFO MemoryStore: Will not store rdd_5_23
+25/06/05 21:02:31 WARN MemoryStore: Not enough space to cache rdd_5_23 in memory! (computed 137.9 MB so far)
+25/06/05 21:02:31 INFO MemoryStore: Memory use = 168.3 KB (blocks) + 278.3 MB (scratch space shared across 3 tasks(s)) = 278.5 MB. Storage limit = 278.5 MB.
+25/06/05 21:02:31 WARN BlockManager: Block rdd_5_23 could not be removed as it was not found on disk or in memory
+25/06/05 21:02:31 WARN BlockManager: Putting block rdd_5_23 failed
+25/06/05 21:02:31 DEBUG BlockManager: Putting block rdd_5_23 without replication took  5712 ms
+25/06/05 21:02:31 DEBUG BlockManager: Getting local block rdd_5_23
+25/06/05 21:02:31 DEBUG BlockManager: Block rdd_5_23 was not found
+25/06/05 21:02:31 DEBUG BlockManager: Getting remote block rdd_5_23
+25/06/05 21:02:31 DEBUG BlockManager: Block rdd_5_23 not found
+25/06/05 21:02:31 DEBUG MapOutputTrackerMaster: Fetching outputs for shuffle 2, partitions 23-24
+25/06/05 21:02:31 DEBUG ShuffleBlockFetcherIterator: maxBytesInFlight: 50331648, targetRequestSize: 10066329
+25/06/05 21:02:31 INFO ShuffleBlockFetcherIterator: Getting 77 non-empty blocks out of 77 blocks
+25/06/05 21:02:31 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/06/05 21:02:31 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  0 ms
+25/06/05 21:02:33 DEBUG TaskMemoryManager: Task 84 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@31fc7ece
+25/06/05 21:02:33 INFO ExternalAppendOnlyMap: Thread 317 spilling in-memory map of 272.4 MB to disk (1 time so far)
+25/06/05 21:02:33 DEBUG TaskMemoryManager: Task 94 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@12024c44
+25/06/05 21:02:33 INFO ExternalAppendOnlyMap: Thread 271 spilling in-memory map of 272.4 MB to disk (1 time so far)
+25/06/05 21:02:33 DEBUG TaskMemoryManager: Task 78 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@6e0c3b8c
+25/06/05 21:02:33 INFO ExternalAppendOnlyMap: Thread 311 spilling in-memory map of 272.4 MB to disk (1 time so far)
+25/06/05 21:02:33 INFO ExternalAppendOnlyMap: Task 100 force spilling in-memory map to disk and it will release 267.4 MB memory
+25/06/05 21:02:33 INFO ExternalAppendOnlyMap: Task 98 force spilling in-memory map to disk and it will release 267.4 MB memory
+25/06/05 21:02:33 DEBUG TaskMemoryManager: Task 93 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@48fd046b
+25/06/05 21:02:33 INFO ExternalAppendOnlyMap: Thread 289 spilling in-memory map of 160.6 MB to disk (1 time so far)
+25/06/05 21:02:33 INFO ExternalAppendOnlyMap: Task 101 force spilling in-memory map to disk and it will release 267.4 MB memory
+25/06/05 21:02:33 DEBUG TaskMemoryManager: Task 103 release 267.4 MB from org.apache.spark.util.collection.ExternalAppendOnlyMap@13eafafc
+25/06/05 21:02:33 DEBUG TaskMemoryManager: Task 80 acquired 936.9 KB for org.apache.spark.util.collection.ExternalAppendOnlyMap@7edec161
+25/06/05 21:02:33 INFO ExternalAppendOnlyMap: Thread 296 spilling in-memory map of 272.8 MB to disk (1 time so far)
+25/06/05 21:02:33 DEBUG TaskMemoryManager: Task 97 release 267.4 MB from org.apache.spark.util.collection.ExternalAppendOnlyMap@7e07436e
+25/06/05 21:02:33 DEBUG TaskMemoryManager: Task 103 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@13eafafc
+25/06/05 21:02:33 DEBUG TaskMemoryManager: Task 107 acquired 159.4 KB for org.apache.spark.util.collection.ExternalAppendOnlyMap@1bf0f52e
+25/06/05 21:02:33 DEBUG TaskMemoryManager: Task 107 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@1bf0f52e
+25/06/05 21:02:33 INFO ExternalAppendOnlyMap: Thread 315 spilling in-memory map of 272.1 MB to disk (1 time so far)
+25/06/05 21:02:33 DEBUG TaskMemoryManager: Task 103 acquired 10.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@13eafafc
+25/06/05 21:02:33 DEBUG TaskMemoryManager: Task 97 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@7e07436e
+25/06/05 21:02:33 DEBUG TaskMemoryManager: Task 97 acquired 10.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@7e07436e
+25/06/05 21:02:33 DEBUG TaskMemoryManager: Task 103 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@13eafafc
+25/06/05 21:02:34 DEBUG TaskMemoryManager: Task 97 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@7e07436e
+25/06/05 21:02:34 DEBUG TaskMemoryManager: Task 99 release 267.4 MB from org.apache.spark.util.collection.ExternalAppendOnlyMap@59d87ec7
+25/06/05 21:02:34 DEBUG TaskMemoryManager: Task 79 acquired 2.4 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@11fab1d8
+25/06/05 21:02:34 DEBUG TaskMemoryManager: Task 79 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@11fab1d8
+25/06/05 21:02:34 INFO ExternalAppendOnlyMap: Thread 267 spilling in-memory map of 272.1 MB to disk (1 time so far)
+25/06/05 21:02:34 DEBUG TaskMemoryManager: Task 99 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@59d87ec7
+25/06/05 21:02:34 DEBUG TaskMemoryManager: Task 103 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@13eafafc
+25/06/05 21:02:34 DEBUG TaskMemoryManager: Task 99 acquired 10.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@59d87ec7
+25/06/05 21:02:34 DEBUG TaskMemoryManager: Task 89 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@44da341d
+25/06/05 21:02:34 INFO ExternalAppendOnlyMap: Thread 250 spilling in-memory map of 269.0 MB to disk (1 time so far)
+25/06/05 21:02:34 DEBUG TaskMemoryManager: Task 83 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@41686df2
+25/06/05 21:02:34 INFO ExternalAppendOnlyMap: Thread 318 spilling in-memory map of 270.9 MB to disk (1 time so far)
+25/06/05 21:02:34 DEBUG TaskMemoryManager: Task 99 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@59d87ec7
+25/06/05 21:02:34 DEBUG TaskMemoryManager: Task 104 release 267.4 MB from org.apache.spark.util.collection.ExternalAppendOnlyMap@449df671
+25/06/05 21:02:34 DEBUG TaskMemoryManager: Task 104 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@449df671
+25/06/05 21:02:34 DEBUG TaskMemoryManager: Task 104 acquired 10.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@449df671
+25/06/05 21:02:34 DEBUG TaskMemoryManager: Task 103 acquired 80.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@13eafafc
+25/06/05 21:02:34 DEBUG TaskMemoryManager: Task 104 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@449df671
+25/06/05 21:02:34 DEBUG TaskMemoryManager: Task 92 release 267.4 MB from org.apache.spark.util.collection.ExternalAppendOnlyMap@619011dd
+25/06/05 21:02:35 DEBUG TaskMemoryManager: Task 85 release 267.4 MB from org.apache.spark.util.collection.ExternalAppendOnlyMap@3db04b55
+25/06/05 21:02:35 DEBUG TaskMemoryManager: Task 92 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@619011dd
+25/06/05 21:02:35 DEBUG TaskMemoryManager: Task 87 acquired 852.5 KB for org.apache.spark.util.collection.ExternalAppendOnlyMap@67faa44e
+25/06/05 21:02:35 INFO ExternalAppendOnlyMap: Thread 310 spilling in-memory map of 278.3 MB to disk (1 time so far)
+25/06/05 21:02:35 DEBUG TaskMemoryManager: Task 85 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@3db04b55
+25/06/05 21:02:35 DEBUG TaskMemoryManager: Task 92 acquired 10.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@619011dd
+25/06/05 21:02:35 DEBUG TaskMemoryManager: Task 98 release 267.4 MB from org.apache.spark.util.collection.ExternalAppendOnlyMap@c9ce2cd
+25/06/05 21:02:35 DEBUG TaskMemoryManager: Task 98 released 267.4 MB from org.apache.spark.util.collection.ExternalAppendOnlyMap@c9ce2cd for org.apache.spark.util.collection.ExternalAppendOnlyMap@fc68d73
+25/06/05 21:02:35 DEBUG TaskMemoryManager: Task 98 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@fc68d73
+25/06/05 21:02:35 DEBUG TaskMemoryManager: Task 85 acquired 10.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@3db04b55
+25/06/05 21:02:35 DEBUG TaskMemoryManager: Task 100 release 267.4 MB from org.apache.spark.util.collection.ExternalAppendOnlyMap@61b3e70
+25/06/05 21:02:35 DEBUG TaskMemoryManager: Task 100 released 267.4 MB from org.apache.spark.util.collection.ExternalAppendOnlyMap@61b3e70 for org.apache.spark.util.collection.ExternalAppendOnlyMap@154da975
+25/06/05 21:02:35 DEBUG TaskMemoryManager: Task 100 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@154da975
+25/06/05 21:02:35 DEBUG TaskMemoryManager: Task 98 acquired 10.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@fc68d73
+25/06/05 21:02:35 DEBUG TaskMemoryManager: Task 77 release 155.0 MB from org.apache.spark.util.collection.ExternalAppendOnlyMap@578fcfa2
+25/06/05 21:02:35 DEBUG TaskMemoryManager: Task 104 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@449df671
+25/06/05 21:02:35 DEBUG TaskMemoryManager: Task 92 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@619011dd
+25/06/05 21:02:35 DEBUG TaskMemoryManager: Task 108 acquired 2.8 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@51568dda
+25/06/05 21:02:35 DEBUG TaskMemoryManager: Task 100 acquired 10.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@154da975
+25/06/05 21:02:35 DEBUG TaskMemoryManager: Task 108 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@51568dda
+
+
+25/06/05 21:02:36 DEBUG TaskMemoryManager: Task 86 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@700a41c3
+25/06/05 21:02:36 DEBUG TaskMemoryManager: Task 106 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@680191f
+25/06/05 21:02:36 DEBUG TaskMemoryManager: Task 100 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@154da975
+25/06/05 21:02:36 DEBUG TaskMemoryManager: Task 81 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@6b05800f
+25/06/05 21:02:36 INFO ExternalAppendOnlyMap: Thread 257 spilling in-memory map of 278.9 MB to disk (1 time so far)
+25/06/05 21:02:40 DEBUG TaskMemoryManager: Task 82 release 260.2 MB from org.apache.spark.util.collection.ExternalAppendOnlyMap@40bc7d1a
+25/06/05 21:02:40 DEBUG TaskMemoryManager: Task 107 acquired 80.1 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@1bf0f52e
+25/06/05 21:02:40 DEBUG TaskMemoryManager: Task 91 acquired 77.9 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@2a2c20cb
+25/06/05 21:02:40 DEBUG TaskMemoryManager: Task 92 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@619011dd
+25/06/05 21:02:40 INFO ExternalAppendOnlyMap: Thread 275 spilling in-memory map of 269.1 MB to disk (2 times so far)
+
+25/06/05 21:02:09 INFO YarnClientSchedulerBackend: Connecting to ResourceManager at localhost:8032
+25/06/05 21:02:09 INFO YarnClientSchedulerBackend: Received container allocation from YARN: container_1749157329_0001_01_000001
+25/06/05 21:02:09 INFO YarnClientSchedulerBackend: Launching executor on container_1749157329_0001_01_000001 with 6656MB memory
+25/06/05 21:02:09 INFO YarnClientSchedulerBackend: Registered executor NettyRpcEndpointRef(spark-client://Executor) with ID driver
+
+25/06/05 21:12:33 WARN NettyRpcEnv: Ignored message: HeartbeatResponse(false)
+25/06/05 21:12:33 DEBUG TaskMemoryManager: Task 107 acquired 27.1 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@9549687
+25/06/05 21:12:45 DEBUG TaskMemoryManager: unreleased 194.5 MB memory from org.apache.spark.util.collection.ExternalAppendOnlyMap@18268c79
+25/06/05 21:12:45 DEBUG TaskMemoryManager: unreleased 186.1 MB memory from org.apache.spark.util.collection.ExternalAppendOnlyMap@61abeac7
+25/06/05 21:12:45 WARN BlockManager: Putting block rdd_5_6 failed due to an exception
+25/06/05 21:12:45 WARN BlockManager: Block rdd_5_6 could not be removed as it was not found on disk or in memory
+25/06/05 21:12:46 DEBUG BlockManagerMaster: Updated info of block rdd_5_6
+25/06/05 21:12:46 DEBUG BlockManager: Told master about block rdd_5_6
+25/06/05 21:12:46 ERROR Executor: Exception in task 16.0 in stage 1.0 (TID 93)
+
+25/06/05 21:11:50 WARN NettyRpcEnv: Ignored message: HeartbeatResponse(false)
+25/06/05 21:12:25 WARN NettyRpcEndpointRef: Error sending message [message = Heartbeat(driver,[Lscala.Tuple2;@3311bfd8,BlockManagerId(driver, 10.52.2.86, 40315, None))] in 1 attempts
+org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [10 seconds]. This timeout is controlled by spark.executor.heartbeatInterval
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:48)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:63)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at scala.PartialFunction$OrElse.apply(PartialFunction.scala:167)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:83)
+	at org.apache.spark.rpc.RpcEndpointRef.askWithRetry(RpcEndpointRef.scala:102)
+	at org.apache.spark.executor.Executor.org$apache$spark$executor$Executor$$reportHeartBeat(Executor.scala:692)
+	at org.apache.spark.executor.Executor$$anon$1$$anonfun$run$1.apply$mcV$sp(Executor.scala:721)
+	at org.apache.spark.executor.Executor$$anon$1$$anonfun$run$1.apply(Executor.scala:721)
+	at org.apache.spark.executor.Executor$$anon$1$$anonfun$run$1.apply(Executor.scala:721)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1963)
+	at org.apache.spark.executor.Executor$$anon$1.run(Executor.scala:721)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.util.concurrent.TimeoutException: Futures timed out after [10 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:219)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at scala.concurrent.Await$$anonfun$result$1.apply(package.scala:190)
+	at scala.concurrent.BlockContext$DefaultBlockContext$.blockOn(BlockContext.scala:53)
+	at scala.concurrent.Await$.result(package.scala:190)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:81)
+	... 14 more
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: maxBytesInFlight: 50331648, targetRequestSize: 10066329
+25/06/05 21:02:26 INFO ShuffleBlockFetcherIterator: Getting 77 non-empty blocks out of 77 blocks
+25/06/05 21:02:26 INFO ShuffleBlockFetcherIterator: Getting 77 non-empty blocks out of 77 blocks
+25/06/05 21:02:26 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/06/05 21:02:26 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: maxBytesInFlight: 50331648, targetRequestSize: 10066329
+25/06/05 21:02:26 INFO ShuffleBlockFetcherIterator: Getting 77 non-empty blocks out of 77 blocks
+25/06/05 21:02:26 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  30 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  25 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  24 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  34 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  31 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  32 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  30 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  36 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  25 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  32 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  32 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  25 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  29 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  32 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  29 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  27 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  30 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  26 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  28 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  29 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  31 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  30 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  36 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  38 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  28 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  26 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  27 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  31 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  26 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  32 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  27 ms
+25/06/05 21:02:26 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  28 ms
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 96 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@312ec8df
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 84 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@31fc7ece
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 82 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@40bc7d1a
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 78 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@6e0c3b8c
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 92 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@619011dd
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 90 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@63443aae
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 91 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@2a2c20cb
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 87 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@67faa44e
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 105 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@69afef
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 94 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@12024c44
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 104 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@449df671
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 99 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@59d87ec7
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 108 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@51568dda
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 95 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@55d31850
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 77 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@578fcfa2
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 88 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@2880c823
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 89 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@44da341d
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 107 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@1bf0f52e
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 93 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@48fd046b
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 100 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@61b3e70
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 104 acquired 10.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@449df671
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 100 acquired 10.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@61b3e70
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 80 acquired 10.2 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@7edec161
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 94 acquired 10.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@12024c44
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 86 acquired 10.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@700a41c3
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 85 acquired 10.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@3db04b55
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 102 acquired 10.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@6cfca6f
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 106 acquired 10.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@680191f
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 104 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@449df671
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 79 acquired 10.2 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@11fab1d8
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 97 acquired 10.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@7e07436e
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 105 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@69afef
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 84 acquired 20.3 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@31fc7ece
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 88 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@2880c823
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 98 acquired 10.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@c9ce2cd
+25/06/05 21:02:26 DEBUG TaskMemoryManager: Task 90 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@63443aae
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 108 acquired 20.2 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@51568dda
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 101 acquired 10.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@6e10d71
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 77 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@578fcfa2
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 87 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@67faa44e
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 96 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@312ec8df
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 103 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@13eafafc
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 82 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@40bc7d1a
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 92 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@619011dd
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 107 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@1bf0f52e
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 89 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@44da341d
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 91 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@2a2c20cb
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 85 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@3db04b55
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 78 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@6e0c3b8c
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 83 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@41686df2
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 86 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@700a41c3
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 99 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@59d87ec7
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 95 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@55d31850
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 100 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@61b3e70
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 80 acquired 20.4 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@7edec161
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 106 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@680191f
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 94 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@12024c44
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 81 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@6b05800f
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 102 acquired 20.8 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@6cfca6f
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 79 acquired 20.2 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@11fab1d8
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 97 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@7e07436e
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 98 acquired 20.1 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@c9ce2cd
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 93 acquired 20.1 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@48fd046b
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 101 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@6e10d71
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 104 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@449df671
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 88 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@2880c823
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 103 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@13eafafc
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 99 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@59d87ec7
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 90 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@63443aae
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 85 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@3db04b55
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 96 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@312ec8df
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 84 acquired 40.6 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@31fc7ece
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 86 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@700a41c3
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 95 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@55d31850
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 100 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@61b3e70
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 105 acquired 40.2 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@69afef
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 78 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@6e0c3b8c
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 87 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@67faa44e
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 102 acquired 40.8 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@6cfca6f
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 92 acquired 41.2 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@619011dd
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 106 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@680191f
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 97 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@7e07436e
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 107 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@1bf0f52e
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 80 acquired 40.7 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@7edec161
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 98 acquired 40.1 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@c9ce2cd
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 83 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@41686df2
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 94 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@12024c44
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 77 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@578fcfa2
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 91 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@2a2c20cb
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 89 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@44da341d
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 108 acquired 40.2 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@51568dda
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 79 acquired 40.4 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@11fab1d8
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 101 acquired 40.4 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@6e10d71
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 81 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@6b05800f
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 82 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@40bc7d1a
+25/06/05 21:02:27 DEBUG TaskMemoryManager: Task 99 acquired 80.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@59d87ec7
+25/06/05 21:02:28 DEBUG ContextCleaner: Got cleaning task CleanBroadcast(1)
+25/06/05 21:02:28 DEBUG ContextCleaner: Cleaning broadcast 1
+25/06/05 21:02:28 DEBUG TorrentBroadcast: Unpersisting TorrentBroadcast 1
+25/06/05 21:02:28 DEBUG BlockManagerSlaveEndpoint: removing broadcast 1
+25/06/05 21:02:28 DEBUG BlockManager: Removing broadcast 1
+25/06/05 21:02:28 DEBUG TaskMemoryManager: Task 103 acquired 80.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@13eafafc
+25/06/05 21:02:28 DEBUG BlockManager: Removing block broadcast_1
+25/06/05 21:02:28 DEBUG MemoryStore: Block broadcast_1 of size 11696 dropped from memory (free 6322861086)
+25/06/05 21:02:28 DEBUG BlockManager: Removing block broadcast_1_piece0
+25/06/05 21:02:28 DEBUG MemoryStore: Block broadcast_1_piece0 of size 6128 dropped from memory (free 6322867214)
+25/06/05 21:02:28 INFO BlockManagerInfo: Removed broadcast_1_piece0 on 10.52.2.86:40315 in memory (size: 6.0 KB, free: 8.4 GB)
+25/06/05 21:02:28 DEBUG BlockManagerMaster: Updated info of block broadcast_1_piece0
+25/06/05 21:02:28 DEBUG BlockManager: Told master about block broadcast_1_piece0
+25/06/05 21:02:28 DEBUG BlockManagerSlaveEndpoint: Done removing broadcast 1, response is 0
+25/06/05 21:02:28 DEBUG BlockManagerSlaveEndpoint: Sent response: 0 to 10.52.2.86:37137
+25/06/05 21:02:28 DEBUG ContextCleaner: Cleaned broadcast 1
+25/06/05 21:02:28 DEBUG TaskMemoryManager: Task 104 acquired 80.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@449df671
+25/06/05 21:02:28 DEBUG TaskMemoryManager: Task 102 acquired 81.5 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@6cfca6f
+25/06/05 21:02:28 DEBUG TaskMemoryManager: Task 100 acquired 80.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@61b3e70
+25/06/05 21:02:30 DEBUG TaskMemoryManager: Task 87 acquired 109.6 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@67faa44e
+25/06/05 21:02:30 DEBUG TaskMemoryManager: Task 89 acquired 108.9 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@44da341d
+25/06/05 21:02:30 DEBUG TaskMemoryManager: Task 102 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@6cfca6f
+25/06/05 21:02:30 INFO ExternalAppendOnlyMap: Thread 308 spilling in-memory map of 273.8 MB to disk (1 time so far)
+25/06/05 21:02:31 DEBUG TaskMemoryManager: Task 108 acquired 106.7 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@51568dda
+25/06/05 21:02:31 DEBUG TaskMemoryManager: Task 88 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@2880c823
+25/06/05 21:02:31 INFO ExternalAppendOnlyMap: Thread 320 spilling in-memory map of 272.4 MB to disk (1 time so far)
+25/06/05 21:02:31 DEBUG TaskMemoryManager: Task 92 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@619011dd
+25/06/05 21:02:31 INFO ExternalAppendOnlyMap: Thread 275 spilling in-memory map of 272.4 MB to disk (1 time so far)
+25/06/05 21:02:31 DEBUG TaskMemoryManager: Task 106 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@680191f
+25/06/05 21:02:31 INFO ExternalAppendOnlyMap: Thread 282 spilling in-memory map of 272.4 MB to disk (1 time so far)
+25/06/05 21:02:31 DEBUG TaskMemoryManager: Task 85 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@3db04b55
+25/06/05 21:02:31 INFO ExternalAppendOnlyMap: Thread 249 spilling in-memory map of 272.4 MB to disk (1 time so far)
+25/06/05 21:02:31 DEBUG TaskMemoryManager: Task 82 acquired 105.2 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@40bc7d1a
+25/06/05 21:02:31 DEBUG TaskMemoryManager: Task 96 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@312ec8df
+25/06/05 21:02:31 INFO ExternalAppendOnlyMap: Thread 299 spilling in-memory map of 286.9 MB to disk (1 time so far)
+25/06/05 21:02:31 DEBUG TaskMemoryManager: Task 95 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@55d31850
+25/06/05 21:02:31 INFO ExternalAppendOnlyMap: Thread 298 spilling in-memory map of 272.4 MB to disk (1 time so far)
+25/06/05 21:02:31 DEBUG TaskMemoryManager: Task 91 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@2a2c20cb
+25/06/05 21:02:31 INFO ExternalAppendOnlyMap: Thread 291 spilling in-memory map of 272.4 MB to disk (1 time so far)
+25/06/05 21:02:31 DEBUG TaskMemoryManager: Task 86 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@700a41c3
+25/06/05 21:02:31 INFO ExternalAppendOnlyMap: Thread 322 spilling in-memory map of 272.4 MB to disk (1 time so far)
+25/06/05 21:02:31 DEBUG TaskMemoryManager: Task 81 acquired 83.1 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@6b05800f
+25/06/05 21:02:31 DEBUG TaskMemoryManager: Task 105 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@69afef
+25/06/05 21:02:31 INFO ExternalAppendOnlyMap: Thread 323 spilling in-memory map of 271.9 MB to disk (1 time so far)
+25/06/05 21:02:31 DEBUG TaskMemoryManager: Task 90 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@63443aae
+25/06/05 21:02:31 INFO ExternalAppendOnlyMap: Thread 305 spilling in-memory map of 272.4 MB to disk (1 time so far)
+25/06/05 21:02:31 DEBUG TaskMemoryManager: Task 77 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@578fcfa2
+25/06/05 21:02:31 INFO ExternalAppendOnlyMap: Thread 248 spilling in-memory map of 160.0 MB to disk (1 time so far)
+25/06/05 21:02:31 INFO MemoryStore: Will not store rdd_5_21
+25/06/05 21:02:31 WARN MemoryStore: Not enough space to cache rdd_5_21 in memory! (computed 90.2 MB so far)
+25/06/05 21:02:31 INFO MemoryStore: Memory use = 168.3 KB (blocks) + 278.3 MB (scratch space shared across 3 tasks(s)) = 278.5 MB. Storage limit = 278.5 MB.
+25/06/05 21:02:31 WARN BlockManager: Block rdd_5_21 could not be removed as it was not found on disk or in memory
+25/06/05 21:02:31 WARN BlockManager: Putting block rdd_5_21 failed
+25/06/05 21:02:31 DEBUG BlockManager: Putting block rdd_5_21 without replication took  5687 ms
+25/06/05 21:02:31 DEBUG BlockManager: Getting local block rdd_5_21
+25/06/05 21:02:31 DEBUG BlockManager: Block rdd_5_21 was not found
+25/06/05 21:02:31 DEBUG BlockManager: Getting remote block rdd_5_21
+25/06/05 21:02:31 DEBUG BlockManager: Block rdd_5_21 not found
+25/06/05 21:02:31 DEBUG MapOutputTrackerMaster: Fetching outputs for shuffle 2, partitions 21-22
+25/06/05 21:02:31 DEBUG ShuffleBlockFetcherIterator: maxBytesInFlight: 50331648, targetRequestSize: 10066329
+25/06/05 21:02:31 INFO ShuffleBlockFetcherIterator: Getting 77 non-empty blocks out of 77 blocks
+25/06/05 21:02:31 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/06/05 21:02:31 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  1 ms
+25/06/05 21:02:31 INFO MemoryStore: Will not store rdd_5_24
+25/06/05 21:02:31 WARN MemoryStore: Not enough space to cache rdd_5_24 in memory! (computed 58.4 MB so far)
+25/06/05 21:02:31 INFO MemoryStore: Memory use = 168.3 KB (blocks) + 278.3 MB (scratch space shared across 3 tasks(s)) = 278.5 MB. Storage limit = 278.5 MB.
+25/06/05 21:02:31 WARN BlockManager: Block rdd_5_24 could not be removed as it was not found on disk or in memory
+25/06/05 21:02:31 WARN BlockManager: Putting block rdd_5_24 failed
+25/06/05 21:02:31 DEBUG BlockManager: Putting block rdd_5_24 without replication took  5705 ms
+25/06/05 21:02:31 DEBUG BlockManager: Getting local block rdd_5_24
+25/06/05 21:02:31 DEBUG BlockManager: Block rdd_5_24 was not found
+25/06/05 21:02:31 DEBUG BlockManager: Getting remote block rdd_5_24
+25/06/05 21:02:31 DEBUG BlockManager: Block rdd_5_24 not found
+25/06/05 21:02:31 DEBUG MapOutputTrackerMaster: Fetching outputs for shuffle 2, partitions 24-25
+25/06/05 21:02:31 DEBUG ShuffleBlockFetcherIterator: maxBytesInFlight: 50331648, targetRequestSize: 10066329
+25/06/05 21:02:31 INFO ShuffleBlockFetcherIterator: Getting 77 non-empty blocks out of 77 blocks
+25/06/05 21:02:31 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/06/05 21:02:31 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  1 ms
+25/06/05 21:02:31 INFO MemoryStore: Will not store rdd_5_23
+25/06/05 21:02:31 WARN MemoryStore: Not enough space to cache rdd_5_23 in memory! (computed 137.9 MB so far)
+25/06/05 21:02:31 INFO MemoryStore: Memory use = 168.3 KB (blocks) + 278.3 MB (scratch space shared across 3 tasks(s)) = 278.5 MB. Storage limit = 278.5 MB.
+25/06/05 21:02:31 WARN BlockManager: Block rdd_5_23 could not be removed as it was not found on disk or in memory
+25/06/05 21:02:31 WARN BlockManager: Putting block rdd_5_23 failed
+25/06/05 21:02:31 DEBUG BlockManager: Putting block rdd_5_23 without replication took  5712 ms
+25/06/05 21:02:31 DEBUG BlockManager: Getting local block rdd_5_23
+25/06/05 21:02:31 DEBUG BlockManager: Block rdd_5_23 was not found
+25/06/05 21:02:31 DEBUG BlockManager: Getting remote block rdd_5_23
+25/06/05 21:02:31 DEBUG BlockManager: Block rdd_5_23 not found
+25/06/05 21:02:31 DEBUG MapOutputTrackerMaster: Fetching outputs for shuffle 2, partitions 23-24
+25/06/05 21:02:31 DEBUG ShuffleBlockFetcherIterator: maxBytesInFlight: 50331648, targetRequestSize: 10066329
+25/06/05 21:02:31 INFO ShuffleBlockFetcherIterator: Getting 77 non-empty blocks out of 77 blocks
+25/06/05 21:02:31 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/06/05 21:02:31 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  0 ms
+25/06/05 21:02:33 DEBUG TaskMemoryManager: Task 84 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@31fc7ece
+25/06/05 21:02:33 INFO ExternalAppendOnlyMap: Thread 317 spilling in-memory map of 272.4 MB to disk (1 time so far)
+25/06/05 21:02:33 DEBUG TaskMemoryManager: Task 94 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@12024c44
+25/06/05 21:02:33 INFO ExternalAppendOnlyMap: Thread 271 spilling in-memory map of 272.4 MB to disk (1 time so far)
+25/06/05 21:02:33 DEBUG TaskMemoryManager: Task 78 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@6e0c3b8c
+25/06/05 21:02:33 INFO ExternalAppendOnlyMap: Thread 311 spilling in-memory map of 272.4 MB to disk (1 time so far)
+25/06/05 21:02:33 INFO ExternalAppendOnlyMap: Task 100 force spilling in-memory map to disk and it will release 267.4 MB memory
+25/06/05 21:02:33 INFO ExternalAppendOnlyMap: Task 98 force spilling in-memory map to disk and it will release 267.4 MB memory
+25/06/05 21:02:33 DEBUG TaskMemoryManager: Task 93 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@48fd046b
+25/06/05 21:02:33 INFO ExternalAppendOnlyMap: Thread 289 spilling in-memory map of 160.6 MB to disk (1 time so far)
+25/06/05 21:02:33 INFO ExternalAppendOnlyMap: Task 101 force spilling in-memory map to disk and it will release 267.4 MB memory
+25/06/05 21:02:33 DEBUG TaskMemoryManager: Task 103 release 267.4 MB from org.apache.spark.util.collection.ExternalAppendOnlyMap@13eafafc
+25/06/05 21:02:33 DEBUG TaskMemoryManager: Task 80 acquired 936.9 KB for org.apache.spark.util.collection.ExternalAppendOnlyMap@7edec161
+25/06/05 21:02:33 INFO ExternalAppendOnlyMap: Thread 296 spilling in-memory map of 272.8 MB to disk (1 time so far)
+25/06/05 21:02:33 DEBUG TaskMemoryManager: Task 97 release 267.4 MB from org.apache.spark.util.collection.ExternalAppendOnlyMap@7e07436e
+25/06/05 21:02:33 DEBUG TaskMemoryManager: Task 103 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@13eafafc
+25/06/05 21:02:38 DEBUG TaskMemoryManager: Task 104 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@449df671
+25/06/05 21:02:38 INFO ExternalAppendOnlyMap: Thread 293 spilling in-memory map of 264.6 MB to disk (2 times so far)
+25/06/05 21:02:38 DEBUG TaskMemoryManager: Task 83 acquired 20.6 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@41686df2
+25/06/05 21:02:38 DEBUG TaskMemoryManager: Task 101 acquired 40.4 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@6f58e11c
+25/06/05 21:02:38 DEBUG TaskMemoryManager: Task 87 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@67faa44e
+25/06/05 21:02:38 DEBUG TaskMemoryManager: Task 106 acquired 84.3 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@680191f
+25/06/05 21:02:38 DEBUG TaskMemoryManager: Task 93 acquired 80.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@48fd046b
+25/06/05 21:02:38 DEBUG TaskMemoryManager: Task 84 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@31fc7ece
+25/06/05 21:02:38 DEBUG TaskMemoryManager: Task 86 acquired 83.9 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@700a41c3
+25/06/05 21:02:38 DEBUG TaskMemoryManager: Task 90 acquired 80.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@63443aae
+25/06/05 21:02:38 DEBUG TaskMemoryManager: Task 89 release 264.0 MB from org.apache.spark.util.collection.ExternalAppendOnlyMap@44da341d
+25/06/05 21:02:38 DEBUG TaskMemoryManager: Task 83 acquired 41.2 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@41686df2
+25/06/05 21:02:38 DEBUG TaskMemoryManager: Task 80 acquired 80.6 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@7edec161
+25/06/05 21:02:38 DEBUG TaskMemoryManager: Task 87 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@67faa44e
+25/06/05 21:02:38 DEBUG TaskMemoryManager: Task 89 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@44da341d
+25/06/05 21:02:38 DEBUG TaskMemoryManager: Task 88 acquired 78.2 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@2880c823
+25/06/05 21:02:38 DEBUG TaskMemoryManager: Task 77 acquired 77.5 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@578fcfa2
+25/06/05 21:02:38 DEBUG TaskMemoryManager: Task 89 acquired 10.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@44da341d
+25/06/05 21:02:39 DEBUG TaskMemoryManager: Task 101 acquired 80.4 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@6f58e11c
+25/06/05 21:02:40 DEBUG TaskMemoryManager: Task 105 acquired 76.7 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@69afef
+25/06/05 21:02:40 DEBUG TaskMemoryManager: Task 89 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@44da341d
+25/06/05 21:02:40 DEBUG TaskMemoryManager: Task 78 acquired 80.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@6e0c3b8c
+25/06/05 21:02:40 DEBUG TaskMemoryManager: Task 108 release 265.5 MB from org.apache.spark.util.collection.ExternalAppendOnlyMap@51568dda
+25/06/05 21:02:40 DEBUG TaskMemoryManager: Task 84 acquired 80.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@31fc7ece
+25/06/05 21:02:40 DEBUG TaskMemoryManager: Task 108 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@51568dda
+25/06/05 21:02:40 DEBUG TaskMemoryManager: Task 79 acquired 80.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@11fab1d8
+25/06/05 21:02:40 DEBUG TaskMemoryManager: Task 108 acquired 10.1 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@51568dda
+25/06/05 21:02:40 DEBUG TaskMemoryManager: Task 82 release 260.2 MB from org.apache.spark.util.collection.ExternalAppendOnlyMap@40bc7d1a
+25/06/05 21:02:40 DEBUG TaskMemoryManager: Task 107 acquired 80.1 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@1bf0f52e
+25/06/05 21:02:40 DEBUG TaskMemoryManager: Task 91 acquired 77.9 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@2a2c20cb
+25/06/05 21:02:40 DEBUG TaskMemoryManager: Task 92 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@619011dd
+25/06/05 21:02:40 INFO ExternalAppendOnlyMap: Thread 275 spilling in-memory map of 269.1 MB to disk (2 times so far)
+25/06/05 21:02:40 DEBUG TaskMemoryManager: Task 82 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@40bc7d1a
+25/06/05 21:02:40 DEBUG TaskMemoryManager: Task 106 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@680191f
+25/06/05 21:02:40 INFO ExternalAppendOnlyMap: Thread 282 spilling in-memory map of 245.5 MB to disk (2 times so far)
+25/06/05 21:02:40 DEBUG TaskMemoryManager: Task 89 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@44da341d
+25/06/05 21:02:40 DEBUG TaskMemoryManager: Task 108 acquired 20.1 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@51568dda
+25/06/05 21:02:40 DEBUG TaskMemoryManager: Task 83 acquired 82.4 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@41686df2
+25/06/05 21:02:40 DEBUG TaskMemoryManager: Task 82 acquired 10.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@40bc7d1a
+25/06/05 21:02:40 DEBUG TaskMemoryManager: Task 87 acquired 80.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@67faa44e
+25/06/05 21:02:40 DEBUG TaskMemoryManager: Task 93 acquired 62.1 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@48fd046b
+25/06/05 21:02:40 DEBUG TaskMemoryManager: Task 90 acquired 62.1 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@63443aae
+25/06/05 21:02:40 DEBUG TaskMemoryManager: Task 86 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@700a41c3
+25/06/05 21:02:40 INFO ExternalAppendOnlyMap: Thread 322 spilling in-memory map of 244.0 MB to disk (2 times so far)
+25/06/05 21:02:40 DEBUG TaskMemoryManager: Task 85 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@3db04b55
+25/06/05 21:02:40 INFO ExternalAppendOnlyMap: Thread 249 spilling in-memory map of 251.6 MB to disk (2 times so far)
+25/06/05 21:02:40 DEBUG TaskMemoryManager: Task 104 release 259.6 MB from org.apache.spark.util.collection.ExternalAppendOnlyMap@449df671
+25/06/05 21:02:41 DEBUG TaskMemoryManager: Task 99 release 35.0 MB from org.apache.spark.util.collection.ExternalAppendOnlyMap@59d87ec7
+25/06/05 21:02:41 DEBUG TaskMemoryManager: Task 88 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@2880c823
+25/06/05 21:02:41 INFO ExternalAppendOnlyMap: Thread 320 spilling in-memory map of 244.6 MB to disk (2 times so far)
+25/06/05 21:02:41 DEBUG TaskMemoryManager: Task 101 acquired 74.8 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@6f58e11c
+25/06/05 21:02:41 DEBUG TaskMemoryManager: Task 104 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@449df671
+25/06/05 21:02:41 INFO MemoryStore: Block rdd_5_22 stored as values in memory (estimated size 263.8 MB, free 2.8 GB)
+25/06/05 21:02:41 INFO BlockManagerInfo: Added rdd_5_22 in memory on 10.52.2.86:40315 (size: 263.8 MB, free: 8.1 GB)
+25/06/05 21:02:41 DEBUG BlockManagerMaster: Updated info of block rdd_5_22
+25/06/05 21:02:41 DEBUG BlockManager: Told master about block rdd_5_22
+25/06/05 21:02:41 DEBUG BlockManager: Put block rdd_5_22 locally took  15162 ms
+25/06/05 21:02:41 DEBUG BlockManager: Putting block rdd_5_22 without replication took  15163 ms
+25/06/05 21:02:41 DEBUG BlockManager: Getting local block rdd_5_22
+25/06/05 21:02:41 DEBUG BlockManager: Level for block rdd_5_22 is StorageLevel(memory, deserialized, 1 replicas)
+25/06/05 21:02:41 DEBUG BlockManager: Getting local block rdd_5_22
+25/06/05 21:02:41 DEBUG BlockManager: Level for block rdd_5_22 is StorageLevel(memory, deserialized, 1 replicas)
+25/06/05 21:02:41 INFO BlockManager: Found block rdd_5_22 locally
+25/06/05 21:02:41 DEBUG TaskMemoryManager: Task 99 acquired 16.2 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@34dc48a5
+25/06/05 21:02:41 DEBUG TaskMemoryManager: Task 81 release 273.9 MB from org.apache.spark.util.collection.ExternalAppendOnlyMap@6b05800f
+25/06/05 21:02:41 DEBUG TaskMemoryManager: Task 82 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@40bc7d1a
+25/06/05 21:02:41 DEBUG TaskMemoryManager: Task 104 acquired 10.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@449df671
+25/06/05 21:02:41 DEBUG TaskMemoryManager: Task 81 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@6b05800f
+25/06/05 21:02:41 DEBUG TaskMemoryManager: Task 99 acquired 41.6 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@34dc48a5
+25/06/05 21:02:41 DEBUG TaskMemoryManager: Task 81 acquired 10.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@6b05800f
+25/06/05 21:02:41 DEBUG TaskMemoryManager: Task 104 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@449df671
+25/06/05 21:02:41 DEBUG TaskMemoryManager: Task 81 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@6b05800f
+25/06/05 21:02:41 DEBUG TaskMemoryManager: Task 99 acquired 73.6 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@34dc48a5
+25/06/05 21:02:41 DEBUG TaskMemoryManager: Task 104 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@449df671
+25/06/05 21:02:41 DEBUG TaskMemoryManager: Task 108 acquired 40.2 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@51568dda
+25/06/05 21:02:41 DEBUG TaskMemoryManager: Task 97 release 35.0 MB from org.apache.spark.util.collection.ExternalAppendOnlyMap@7e07436e
+25/06/05 21:02:41 DEBUG TaskMemoryManager: Task 81 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@6b05800f
+25/06/05 21:02:41 INFO MemoryStore: Block rdd_5_20 stored as values in memory (estimated size 295.4 MB, free 2.5 GB)
+25/06/05 21:02:41 INFO BlockManagerInfo: Added rdd_5_20 in memory on 10.52.2.86:40315 (size: 295.4 MB, free: 7.8 GB)
+25/06/05 21:02:41 DEBUG BlockManagerMaster: Updated info of block rdd_5_20
+25/06/05 21:02:41 DEBUG BlockManager: Told master about block rdd_5_20
+25/06/05 21:02:41 DEBUG BlockManager: Put block rdd_5_20 locally took  15639 ms
+25/06/05 21:02:41 DEBUG BlockManager: Putting block rdd_5_20 without replication took  15639 ms
+25/06/05 21:02:41 DEBUG BlockManager: Getting local block rdd_5_20
+25/06/05 21:02:41 DEBUG BlockManager: Level for block rdd_5_20 is StorageLevel(memory, deserialized, 1 replicas)
+25/06/05 21:02:41 DEBUG BlockManager: Getting local block rdd_5_20
+25/06/05 21:02:41 DEBUG BlockManager: Level for block rdd_5_20 is StorageLevel(memory, deserialized, 1 replicas)
+25/06/05 21:02:41 INFO BlockManager: Found block rdd_5_20 locally
+25/06/05 21:02:41 DEBUG TaskMemoryManager: Task 99 acquired 79.6 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@34dc48a5
+25/06/05 21:02:41 DEBUG TaskMemoryManager: Task 97 acquired 16.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@1e631a41
+25/06/05 21:02:41 DEBUG TaskMemoryManager: Task 105 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@69afef
+25/06/05 21:02:41 INFO ExternalAppendOnlyMap: Thread 323 spilling in-memory map of 236.8 MB to disk (2 times so far)
+25/06/05 21:02:41 DEBUG TaskMemoryManager: Task 99 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@34dc48a5
+25/06/05 21:02:41 INFO ExternalAppendOnlyMap: Thread 281 spilling in-memory map of 252.0 MB to disk (1 time so far)
+
+25/06/05 21:02:41 INFO MemoryStore: Block rdd_5_23 stored as values in memory (estimated size 263.0 MB, free 2.7 GB)
+25/06/05 21:02:41 INFO BlockManagerInfo: Added rdd_5_23 in memory on 10.52.2.86:40315 (size: 263.0 MB, free: 7.6 GB)
+25/06/05 21:02:41 DEBUG BlockManagerMaster: Updated info of block rdd_5_23
+25/06/05 21:02:41 DEBUG BlockManager: Told master about block rdd_5_23
+25/06/05 21:02:41 DEBUG BlockManager: Put block rdd_5_23 locally took  10282 ms
+25/06/05 21:02:41 DEBUG BlockManager: Putting block rdd_5_23 without replication took  10282 ms
+25/06/05 21:02:41 DEBUG BlockManager: Getting local block rdd_5_23
+25/06/05 21:02:41 DEBUG BlockManager: Level for block rdd_5_23 is StorageLevel(memory, deserialized, 1 replicas)
+25/06/05 21:02:42 DEBUG TaskMemoryManager: Task 92 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@619011dd
+25/06/05 21:02:42 INFO MemoryStore: Block rdd_5_21 stored as values in memory (estimated size 263.7 MB, free 3.3 GB)
+25/06/05 21:02:42 INFO BlockManagerInfo: Added rdd_5_21 in memory on 10.52.2.86:40315 (size: 263.7 MB, free: 7.3 GB)
+25/06/05 21:02:42 DEBUG BlockManagerMaster: Updated info of block rdd_5_21
+25/06/05 21:02:42 DEBUG BlockManager: Told master about block rdd_5_21
+25/06/05 21:02:42 DEBUG BlockManager: Put block rdd_5_21 locally took  10444 ms
+25/06/05 21:02:42 DEBUG BlockManager: Putting block rdd_5_21 without replication took  10444 ms
+25/06/05 21:02:42 DEBUG BlockManager: Getting local block rdd_5_21
+25/06/05 21:02:42 DEBUG BlockManager: Level for block rdd_5_21 is StorageLevel(memory, deserialized, 1 replicas)
+25/06/05 21:02:42 DEBUG TaskMemoryManager: Task 88 acquired 10.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@2880c823
+25/06/05 21:02:42 DEBUG TaskMemoryManager: Task 81 acquired 80.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@6b05800f
+25/06/05 21:02:42 DEBUG TaskMemoryManager: Task 85 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@3db04b55
+25/06/05 21:02:42 DEBUG TaskMemoryManager: Task 92 acquired 10.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@619011dd
+25/06/05 21:02:44 INFO MemoryStore: Block rdd_5_26 stored as values in memory (estimated size 461.9 MB, free 2.5 GB)
+25/06/05 21:02:44 INFO BlockManagerInfo: Added rdd_5_26 in memory on 10.52.2.86:40315 (size: 461.9 MB, free: 6.8 GB)
+25/06/05 21:02:44 DEBUG BlockManagerMaster: Updated info of block rdd_5_26
+25/06/05 21:02:44 DEBUG BlockManager: Told master about block rdd_5_26
+25/06/05 21:02:44 DEBUG BlockManager: Put block rdd_5_26 locally took  18030 ms
+25/06/05 21:02:44 DEBUG BlockManager: Putting block rdd_5_26 without replication took  18030 ms
+25/06/05 21:02:44 DEBUG BlockManager: Getting local block rdd_5_26
+25/06/05 21:02:44 DEBUG BlockManager: Level for block rdd_5_26 is StorageLevel(memory, deserialized, 1 replicas)
+25/06/05 21:02:44 DEBUG BlockManager: Getting local block rdd_5_26
+25/06/05 21:02:44 DEBUG BlockManager: Level for block rdd_5_26 is StorageLevel(memory, deserialized, 1 replicas)
+25/06/05 21:02:44 INFO BlockManager: Found block rdd_5_26 locally
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 103 acquired 16.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@27a65f46
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 98 acquired 68.5 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@5716d775
+25/06/05 21:02:44 INFO ExternalAppendOnlyMap: Thread 253 spilling in-memory map of 192.5 MB to disk (1 time so far)
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 91 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@2a2c20cb
+25/06/05 21:02:44 INFO ExternalAppendOnlyMap: Thread 291 spilling in-memory map of 240.2 MB to disk (2 times so far)
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 107 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@1bf0f52e
+25/06/05 21:02:44 INFO ExternalAppendOnlyMap: Thread 315 spilling in-memory map of 240.2 MB to disk (2 times so far)
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 103 acquired 76.3 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@27a65f46
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 103 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@27a65f46
+25/06/05 21:02:44 INFO ExternalAppendOnlyMap: Thread 283 spilling in-memory map of 178.8 MB to disk (1 time so far)
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 84 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@31fc7ece
+25/06/05 21:02:44 INFO ExternalAppendOnlyMap: Thread 317 spilling in-memory map of 163.4 MB to disk (2 times so far)
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 78 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@6e0c3b8c
+25/06/05 21:02:44 INFO ExternalAppendOnlyMap: Thread 311 spilling in-memory map of 160.1 MB to disk (2 times so far)
+25/06/05 21:02:44 INFO MemoryStore: Will not store rdd_5_27
+25/06/05 21:02:44 WARN MemoryStore: Not enough space to cache rdd_5_27 in memory! (computed 138.2 MB so far)
+25/06/05 21:02:44 INFO MemoryStore: Memory use = 1548.0 MB (blocks) + 2.0 GB (scratch space shared across 6 tasks(s)) = 3.5 GB. Storage limit = 3.6 GB.
+25/06/05 21:02:44 WARN BlockManager: Block rdd_5_27 could not be removed as it was not found on disk or in memory
+25/06/05 21:02:44 WARN BlockManager: Putting block rdd_5_27 failed
+25/06/05 21:02:44 DEBUG BlockManager: Putting block rdd_5_27 without replication took  18566 ms
+25/06/05 21:02:44 DEBUG BlockManager: Getting local block rdd_5_27
+25/06/05 21:02:44 DEBUG BlockManager: Block rdd_5_27 was not found
+25/06/05 21:02:44 DEBUG BlockManager: Getting remote block rdd_5_27
+25/06/05 21:02:44 DEBUG BlockManager: Block rdd_5_27 not found
+25/06/05 21:02:44 DEBUG MapOutputTrackerMaster: Fetching outputs for shuffle 2, partitions 27-28
+25/06/05 21:02:44 DEBUG ShuffleBlockFetcherIterator: maxBytesInFlight: 50331648, targetRequestSize: 10066329
+25/06/05 21:02:44 INFO ShuffleBlockFetcherIterator: Getting 77 non-empty blocks out of 77 blocks
+25/06/05 21:02:44 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/06/05 21:02:44 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  1 ms
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 80 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@7edec161
+25/06/05 21:02:44 INFO ExternalAppendOnlyMap: Thread 296 spilling in-memory map of 187.5 MB to disk (2 times so far)
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 99 acquired 5.0 MB for org.apache.spark.util.collection.ExternalSorter@1fcf055d
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 104 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@74320a42
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 102 release 75.0 MB from org.apache.spark.util.collection.ExternalAppendOnlyMap@6cfca6f
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 101 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@6f58e11c
+25/06/05 21:02:44 INFO ExternalAppendOnlyMap: Thread 316 spilling in-memory map of 235.6 MB to disk (1 time so far)
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 97 release 188.5 MB from org.apache.spark.util.collection.ExternalAppendOnlyMap@1e631a41
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 90 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@63443aae
+25/06/05 21:02:44 INFO ExternalAppendOnlyMap: Thread 305 spilling in-memory map of 222.2 MB to disk (2 times so far)
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 77 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@578fcfa2
+25/06/05 21:02:44 INFO ExternalAppendOnlyMap: Thread 248 spilling in-memory map of 250.0 MB to disk (2 times so far)
+25/06/05 21:02:44 INFO MemoryStore: Block rdd_5_25 stored as values in memory (estimated size 363.2 MB, free 2014.6 MB)
+25/06/05 21:02:44 INFO BlockManagerInfo: Added rdd_5_25 in memory on 10.52.2.86:40315 (size: 363.2 MB, free: 6.5 GB)
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 97 acquired 16.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@1e631a41
+25/06/05 21:02:44 DEBUG BlockManagerMaster: Updated info of block rdd_5_25
+25/06/05 21:02:44 DEBUG BlockManager: Told master about block rdd_5_25
+25/06/05 21:02:44 DEBUG BlockManager: Put block rdd_5_25 locally took  18657 ms
+25/06/05 21:02:44 DEBUG BlockManager: Putting block rdd_5_25 without replication took  18657 ms
+25/06/05 21:02:44 DEBUG BlockManager: Getting local block rdd_5_25
+25/06/05 21:02:44 DEBUG BlockManager: Level for block rdd_5_25 is StorageLevel(memory, deserialized, 1 replicas)
+25/06/05 21:02:44 DEBUG BlockManager: Getting local block rdd_5_25
+25/06/05 21:02:44 DEBUG BlockManager: Level for block rdd_5_25 is StorageLevel(memory, deserialized, 1 replicas)
+25/06/05 21:02:44 INFO BlockManager: Found block rdd_5_25 locally
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 104 acquired 10.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@74320a42
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 106 acquired 7.6 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@680191f
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 102 acquired 16.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@de7ab02
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 105 acquired 41.6 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@69afef
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 81 acquired 2.6 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@6b05800f
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 81 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@6b05800f
+25/06/05 21:02:44 INFO ExternalAppendOnlyMap: Thread 257 spilling in-memory map of 162.6 MB to disk (2 times so far)
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 83 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@41686df2
+25/06/05 21:02:44 INFO ExternalAppendOnlyMap: Thread 318 spilling in-memory map of 164.9 MB to disk (2 times so far)
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 97 acquired 21.1 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@1e631a41
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 108 acquired 80.4 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@51568dda
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 106 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@680191f
+25/06/05 21:02:44 INFO ExternalAppendOnlyMap: Thread 282 spilling in-memory map of 167.7 MB to disk (3 times so far)
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 102 acquired 21.2 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@de7ab02
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 104 acquired 20.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@74320a42
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 99 acquired 13.8 MB for org.apache.spark.util.collection.ExternalSorter@1fcf055d
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 79 acquired 2.3 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@11fab1d8
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 97 acquired 44.5 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@1e631a41
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 79 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@11fab1d8
+25/06/05 21:02:44 INFO ExternalAppendOnlyMap: Thread 267 spilling in-memory map of 162.4 MB to disk (2 times so far)
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 93 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@48fd046b
+25/06/05 21:02:44 INFO ExternalAppendOnlyMap: Thread 289 spilling in-memory map of 222.2 MB to disk (2 times so far)
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 96 release 77.2 MB from org.apache.spark.util.collection.ExternalAppendOnlyMap@312ec8df
+25/06/05 21:02:44 DEBUG TaskMemoryManager: Task 102 acquired 66.1 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@de7ab02
+25/06/05 21:02:45 INFO MemoryStore: Block rdd_5_19 stored as values in memory (estimated size 328.6 MB, free 1399.8 MB)
+25/06/05 21:02:45 INFO BlockManagerInfo: Added rdd_5_19 in memory on 10.52.2.86:40315 (size: 328.6 MB, free: 6.2 GB)
+25/06/05 21:02:45 DEBUG BlockManagerMaster: Updated info of block rdd_5_19
+25/06/05 21:02:45 DEBUG BlockManager: Told master about block rdd_5_19
+25/06/05 21:02:45 DEBUG BlockManager: Put block rdd_5_19 locally took  19098 ms
+25/06/05 21:02:45 DEBUG BlockManager: Putting block rdd_5_19 without replication took  19098 ms
+25/06/05 21:02:45 DEBUG BlockManager: Getting local block rdd_5_19
+25/06/05 21:02:45 DEBUG BlockManager: Level for block rdd_5_19 is StorageLevel(memory, deserialized, 1 replicas)
+25/06/05 21:02:45 DEBUG BlockManager: Getting local block rdd_5_19
+25/06/05 21:02:45 DEBUG BlockManager: Level for block rdd_5_19 is StorageLevel(memory, deserialized, 1 replicas)
+25/06/05 21:02:45 INFO BlockManager: Found block rdd_5_19 locally
+25/06/05 21:02:45 DEBUG TaskMemoryManager: Task 96 acquired 16.1 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@121d36dc
+25/06/05 21:02:45 DEBUG TaskMemoryManager: Task 104 acquired 40.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@74320a42
+25/06/05 21:02:45 DEBUG TaskMemoryManager: Task 96 acquired 21.2 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@121d36dc
+25/06/05 21:02:45 DEBUG TaskMemoryManager: Task 102 acquired 57.7 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@de7ab02
+25/06/05 21:02:45 DEBUG TaskMemoryManager: Task 105 acquired 81.6 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@69afef
+25/06/05 21:02:45 DEBUG TaskMemoryManager: Task 86 acquired 3.3 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@700a41c3
+25/06/05 21:02:45 DEBUG TaskMemoryManager: Task 86 acquired 0.0 B for org.apache.spark.util.collection.ExternalAppendOnlyMap@700a41c3
+25/06/05 21:02:45 INFO ExternalAppendOnlyMap: Thread 322 spilling in-memory map of 166.1 MB to disk (3 times so far)
+25/06/05 21:02:45 INFO MemoryStore: Will not store rdd_5_15
+25/06/05 21:02:45 WARN MemoryStore: Not enough space to cache rdd_5_15 in memory! (computed 37.1 MB so far)
+25/06/05 21:02:45 INFO MemoryStore: Memory use = 2.2 GB (blocks) + 1164.9 MB (scratch space shared across 5 tasks(s)) = 3.3 GB. Storage limit = 3.3 GB.
+25/06/05 21:02:45 WARN BlockManager: Block rdd_5_15 could not be removed as it was not found on disk or in memory
+25/06/05 21:02:45 WARN BlockManager: Putting block rdd_5_15 failed
+25/06/05 21:02:45 DEBUG BlockManager: Putting block rdd_5_15 without replication took  19244 ms
+25/06/05 21:02:45 DEBUG BlockManager: Getting local block rdd_5_15
+25/06/05 21:02:45 DEBUG BlockManager: Block rdd_5_15 was not found
+25/06/05 21:02:45 DEBUG BlockManager: Getting remote block rdd_5_15
+25/06/05 21:02:45 DEBUG BlockManager: Block rdd_5_15 not found
+25/06/05 21:02:45 DEBUG MapOutputTrackerMaster: Fetching outputs for shuffle 2, partitions 15-16
+25/06/05 21:02:45 DEBUG ShuffleBlockFetcherIterator: maxBytesInFlight: 50331648, targetRequestSize: 10066329
+25/06/05 21:02:45 INFO ShuffleBlockFetcherIterator: Getting 77 non-empty blocks out of 77 blocks
+25/06/05 21:02:45 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/06/05 21:02:45 DEBUG ShuffleBlockFetcherIterator: Got local blocks in  1 ms
+25/06/05 21:02:45 DEBUG TaskMemoryManager: Task 102 acquired 5.2 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@de7ab02
+25/06/05 21:02:45 INFO MemoryStore: Block rdd_5_18 stored as values in memory (estimated size 427.9 MB, free 831.9 MB)
+25/06/05 21:02:45 INFO BlockManagerInfo: Added rdd_5_18 in memory on 10.52.2.86:40315 (size: 427.9 MB, free: 5.8 GB)
+25/06/05 21:02:45 DEBUG BlockManagerMaster: Updated info of block rdd_5_18
+25/06/05 21:02:45 DEBUG TaskMemoryManager: Task 92 acquired 5.0 MB for org.apache.spark.util.collection.ExternalAppendOnlyMap@2cc7b6c7
+25/06/05 21:02:45 DEBUG BlockManager: Told master about block rdd_5_18
+25/06/05 21:02:45 DEBUG BlockManager: Put block rdd_5_18 locally took  19298 ms

@@ -1,0 +1,122 @@
+[
+  {
+    "service_a": {
+      "value": "YARN",
+      "regex": "ResourceManager",
+      "line": "1"
+    },
+    "operation_a": {
+      "value": "submit application",
+      "regex": "Received application submission",
+      "line": "1",
+      "timestamp": "25/06/05 21:02:08"
+    },
+    "service_b": {
+      "value": "YARN",
+      "regex": "RMAppManager",
+      "line": "3"
+    },
+    "operation_b": {
+      "value": "application submission",
+      "regex": "Application .* is submitted",
+      "line": "3",
+      "timestamp": "25/06/05 21:02:08"
+    },
+    "resource": {
+      "value": "application_1749157329_0001",
+      "regex": "application_\\d+_\\d+",
+      "line": "1",
+      "timestamp": "25/06/05 21:02:08"
+    }
+  },
+  {
+    "service_a": {
+      "value": "YARN",
+      "regex": "ResourceManager",
+      "line": "1"
+    },
+    "operation_a": {
+      "value": "add application attempt",
+      "regex": "Added application attempt",
+      "line": "4",
+      "timestamp": "25/06/05 21:02:08"
+    },
+    "service_b": {
+      "value": "YARN",
+      "regex": "ResourceScheduler",
+      "line": "6"
+    },
+    "operation_b": {
+      "value": "allocate container",
+      "regex": "Allocating container",
+      "line": "6",
+      "timestamp": "25/06/05 21:02:09"
+    },
+    "resource": {
+      "value": "container_1749157329_0001_01_000001",
+      "regex": "container_\\d+_\\d+_\\d+_\\d+",
+      "line": "6",
+      "timestamp": "25/06/05 21:02:09"
+    }
+  },
+  {
+    "service_a": {
+      "value": "YARN",
+      "regex": "YarnClientSchedulerBackend",
+      "line": "149"
+    },
+    "operation_a": {
+      "value": "connect to ResourceManager",
+      "regex": "Connecting to ResourceManager",
+      "line": "149",
+      "timestamp": "25/06/05 21:02:09"
+    },
+    "service_b": {
+      "value": "YARN",
+      "regex": "ResourceManager",
+      "line": "149"
+    },
+    "operation_b": {
+      "value": "receive container allocation",
+      "regex": "Received container allocation from YARN",
+      "line": "150",
+      "timestamp": "25/06/05 21:02:09"
+    },
+    "resource": {
+      "value": "container_1749157329_0001_01_000001",
+      "regex": "container_\\d+_\\d+_\\d+_\\d+",
+      "line": "150",
+      "timestamp": "25/06/05 21:02:09"
+    }
+  },
+  {
+    "service_a": {
+      "value": "YARN",
+      "regex": "YarnClientSchedulerBackend",
+      "line": "151"
+    },
+    "operation_a": {
+      "value": "launch executor",
+      "regex": "Launching executor",
+      "line": "151",
+      "timestamp": "25/06/05 21:02:09"
+    },
+    "service_b": {
+      "value": "Spark",
+      "regex": "NettyRpcEndpointRef",
+      "line": "152"
+    },
+    "operation_b": {
+      "value": "register executor",
+      "regex": "Registered executor",
+      "line": "152",
+      "timestamp": "25/06/05 21:02:09"
+    },
+    "resource": {
+      "value": "Executor",
+      "regex": "Executor",
+      "line": "152",
+      "timestamp": "25/06/05 21:02:09"
+    }
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "template_name": "error_exception",
+  "symptom_type": "error_exception",
+  "description": "An ERROR log entry or thrown exception indicating a failure or unexpected condition in a service.",
+  "fields": {
+    "symptom_type": {
+      "value": "error_exception",
+      "description": "Fixed value identifying the symptom category"
+    },
+    "service": {
+      "value": "UNKNOWN",
+      "description": "The service or component that produced the error/exception"
+    },
+    "event": {
+      "value": "UNKNOWN",
+      "description": "Brief description of the error or exception event"
+    },
+    "regex": {
+      "value": "UNKNOWN",
+      "description": "Python regex pattern matching the log line that contains the error/exception"
+    },
+    "line": {
+      "value": "UNKNOWN",
+      "description": "Line number in the log file"
+    },
+    "timestamp": {
+      "value": "UNKNOWN",
+      "description": "Timestamp of the event extracted from the log line"
+    }
+  }
+}

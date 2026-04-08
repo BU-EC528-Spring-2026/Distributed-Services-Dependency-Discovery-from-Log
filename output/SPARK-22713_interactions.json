@@ -1,0 +1,122 @@
+[
+  {
+    "service_a": {
+      "value": "Spark",
+      "regex": "INFO YarnClientSchedulerBackend: Connecting to ResourceManager at",
+      "line": "149"
+    },
+    "operation_a": {
+      "value": "Connect",
+      "regex": "INFO YarnClientSchedulerBackend: Connecting to ResourceManager at",
+      "line": "149",
+      "timestamp": "25/06/05 21:02:09"
+    },
+    "service_b": {
+      "value": "YARN",
+      "regex": "INFO YarnClientSchedulerBackend: Received container allocation from YARN:",
+      "line": "150"
+    },
+    "operation_b": {
+      "value": "Provide Container",
+      "regex": "INFO YarnClientSchedulerBackend: Received container allocation from YARN:",
+      "line": "150",
+      "timestamp": "25/06/05 21:02:09"
+    },
+    "resource": {
+      "value": "container_1749157329_0001_01_000001",
+      "regex": "container_1749157329_0001_01_000001",
+      "line": "150",
+      "timestamp": "25/06/05 21:02:09"
+    }
+  },
+  {
+    "service_a": {
+      "value": "Spark",
+      "regex": "INFO YarnClientSchedulerBackend: Launching executor on",
+      "line": "151"
+    },
+    "operation_a": {
+      "value": "Launch Executor",
+      "regex": "INFO YarnClientSchedulerBackend: Launching executor on",
+      "line": "151",
+      "timestamp": "25/06/05 21:02:09"
+    },
+    "service_b": {
+      "value": "YARN",
+      "regex": "INFO YarnClientSchedulerBackend: Launched container",
+      "line": "150"
+    },
+    "operation_b": {
+      "value": "Allocate Resource",
+      "regex": "INFO YarnClientSchedulerBackend: Received container allocation from YARN:",
+      "line": "150",
+      "timestamp": "25/06/05 21:02:09"
+    },
+    "resource": {
+      "value": "container_1749157329_0001_01_000001",
+      "regex": "INFO YarnClientSchedulerBackend: Launching executor on container_1749157329_0001_01_000001",
+      "line": "151",
+      "timestamp": "25/06/05 21:02:09"
+    }
+  },
+  {
+    "service_a": {
+      "value": "Spark",
+      "regex": "INFO BlockManager: Found block",
+      "line": "501"
+    },
+    "operation_a": {
+      "value": "Read Block",
+      "regex": "INFO BlockManager: Found block",
+      "line": "501",
+      "timestamp": "25/06/05 21:02:41"
+    },
+    "service_b": {
+      "value": "HDFS",
+      "regex": "Added rdd",
+      "line": "492"
+    },
+    "operation_b": {
+      "value": "Store Block",
+      "regex": "Added rdd_5_22 in memory on 10.52.2.86",
+      "line": "492",
+      "timestamp": "25/06/05 21:02:41"
+    },
+    "resource": {
+      "value": "rdd_5_22",
+      "regex": "rdd_5_22",
+      "line": "492",
+      "timestamp": "25/06/05 21:02:41"
+    }
+  },
+  {
+    "service_a": {
+      "value": "Spark",
+      "regex": "WARN NettyRpcEndpointRef: Error sending message",
+      "line": "165"
+    },
+    "operation_a": {
+      "value": "Send Heartbeat",
+      "regex": "WARN NettyRpcEndpointRef: Error sending message",
+      "line": "165",
+      "timestamp": "25/06/05 21:12:25"
+    },
+    "service_b": {
+      "value": "Spark Driver",
+      "regex": "HeartbeatResponse",
+      "line": "154"
+    },
+    "operation_b": {
+      "value": "Respond to Heartbeat",
+      "regex": "Ignored message: HeartbeatResponse",
+      "line": "154",
+      "timestamp": "25/06/05 21:12:33"
+    },
+    "resource": {
+      "value": "Heartbeat",
+      "regex": "Heartbeat",
+      "line": "165",
+      "timestamp": "25/06/05 21:12:25"
+    }
+  }
+]

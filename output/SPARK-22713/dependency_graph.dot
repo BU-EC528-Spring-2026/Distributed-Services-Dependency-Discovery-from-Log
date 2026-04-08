@@ -1,0 +1,47 @@
+// Service Dependency Graph with Symptoms
+digraph {
+	rankdir=LR
+	node [fillcolor=lightblue shape=box style="rounded,filled"]
+	YARN [label=YARN]
+	YARN -> YARN [label="op_a: submit application
+ts_a: 25/06/05 21:02:08
+op_b: application submission
+ts_b: 25/06/05 21:02:08
+res: application_1749157329_0001"]
+	YARN -> YARN [label="op_a: add application attempt
+ts_a: 25/06/05 21:02:08
+op_b: allocate container
+ts_b: 25/06/05 21:02:09
+res: container_1749157329_0001_01_000001"]
+	YARN -> YARN [label="op_a: connect to ResourceManager
+ts_a: 25/06/05 21:02:09
+op_b: receive container allocation
+ts_b: 25/06/05 21:02:09
+res: container_1749157329_0001_01_000001"]
+	Spark [label=Spark]
+	YARN -> Spark [label="op_a: launch executor
+ts_a: 25/06/05 21:02:09
+op_b: register executor
+ts_b: 25/06/05 21:02:09
+res: Executor"]
+	symptom_0 [label="[error_exception]
+Exception in task 16.0 in stage 1.0 (..." fillcolor=lightcoral shape=ellipse style=filled]
+	YARN -> symptom_0 [label="consequence
+(The exception is likely related to the executor la...)" color=gray40 style=dashed]
+	symptom_1 [label="[abnormal_execution_time]
+Futures timed out after [10 seconds]" fillcolor=lightyellow shape=ellipse style=filled]
+	Spark -> symptom_1 [label="consequence
+(The timeout issue in Spark is linked to the intera...)" color=gray40 style=dashed]
+	symptom_2 [label="[excessive_resource_usage]
+Not enough space to cache rdd_5_21 in..." fillcolor=orange shape=ellipse style=filled]
+	YARN -> symptom_2 [label="consequence
+(The memory issue is linked to the application reso...)" color=gray40 style=dashed]
+	symptom_3 [label="[excessive_resource_usage]
+Not enough space to cache rdd_5_24 in..." fillcolor=orange shape=ellipse style=filled]
+	YARN -> symptom_3 [label="consequence
+(The memory issue is tied to the overall applicatio...)" color=gray40 style=dashed]
+	symptom_4 [label="[excessive_resource_usage]
+Not enough space to cache rdd_5_23 in..." fillcolor=orange shape=ellipse style=filled]
+	YARN -> symptom_4 [label="consequence
+(The excessive memory usage is linked to the contai...)" color=gray40 style=dashed]
+}

@@ -1,1 +1,0 @@
-python src/main.py -i log/spark-21714.log
