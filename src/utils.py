@@ -88,17 +88,58 @@ async def link_symptoms_to_interactions(
     return _parse_json_list(content)
 
 
+def _repair_json_escapes(s: str) -> str:
+    """Fix invalid JSON escape sequences that LLMs frequently produce in regex fields.
+
+    JSON only allows \\", \\\\, \\/, \\b, \\f, \\n, \\r, \\t, \\uXXXX.
+    Characters like \\[, \\], \\(, \\), \\d, \\s, \\w, \\+, \\*, \\., \\^, \\$
+    are valid in Python regex but invalid in JSON strings.  We convert them to
+    double-backslash (\\\\X) so json.loads accepts the string and the resulting
+    Python str still contains the intended regex escape.
+    """
+    import re as _re
+    # valid single-char JSON escapes after the backslash
+    _VALID = set('"\\\/bfnrt')
+    result: list = []
+    i = 0
+    while i < len(s):
+        ch = s[i]
+        if ch == '\\' and i + 1 < len(s):
+            nxt = s[i + 1]
+            if nxt == 'u' and i + 5 < len(s):          # \uXXXX — always valid
+                result.append(s[i:i + 6])
+                i += 6
+                continue
+            if nxt in _VALID:                           # valid escape — keep as-is
+                result.append(s[i:i + 2])
+                i += 2
+                continue
+            # invalid escape — double the backslash so JSON accepts it
+            result.append('\\\\')
+            i += 1                                      # keep the next char too
+            continue
+        result.append(ch)
+        i += 1
+    return ''.join(result)
+
+
 def _parse_json_list(content: str) -> List[Dict[str, Any]]:
     stripped = content.strip()
     if stripped.startswith("```"):
         stripped = stripped.split("\n", 1)[1] if "\n" in stripped else stripped
         if "```" in stripped:
             stripped = stripped.rsplit("```", 1)[0]
+    stripped = stripped.strip()
+    # First attempt: parse as-is
     try:
-        result = json.loads(stripped.strip())
-        if not isinstance(result, list):
-            result = [result]
-        return result
+        result = json.loads(stripped)
+        return result if isinstance(result, list) else [result]
+    except Exception:
+        pass
+    # Second attempt: repair invalid escape sequences then parse
+    try:
+        result = json.loads(_repair_json_escapes(stripped))
+        return result if isinstance(result, list) else [result]
     except Exception as e:
         print(f"Error parsing LLM response as JSON: {e}")
         print(f"Raw response:\n{content}")

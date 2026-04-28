@@ -3,46 +3,72 @@
     "symptom_type": "error_exception",
     "service": "Executor",
     "event": "Exception in task 16.0 in stage 1.0 (TID 93)",
-    "regex": "Exception in task \\d+\\.\\d+ in stage \\d+\\.\\d+ \\(TID \\d+\\)",
+    "regex": "ERROR Executor: Exception in task 16\\.0 in stage 1\\.0 \\(TID 93\\)",
     "line": "162",
     "timestamp": "25/06/05 21:12:46"
   },
   {
-    "symptom_type": "abnormal_execution_time",
-    "service": "Spark",
-    "event": "Futures timed out after [10 seconds]",
-    "duration": "10 seconds",
-    "regex": "Futures timed out after \\[\\d+ seconds\\]",
+    "symptom_type": "error_exception",
+    "service": "Spark RPC",
+    "event": "Futures timed out after [10 seconds]. This timeout is controlled by spark.executor.heartbeatInterval",
+    "regex": "RpcTimeoutException: Futures timed out after \\[10 seconds\\]",
     "line": "166",
     "timestamp": "25/06/05 21:12:25"
   },
   {
+    "symptom_type": "abnormal_execution_time",
+    "service": "BlockManager",
+    "event": "Putting block rdd_5_22 without replication took unexpectedly long",
+    "duration": "15163 ms",
+    "regex": "Putting block rdd_5_22 without replication took\\s+15163 ms",
+    "line": "496",
+    "timestamp": "25/06/05 21:02:41"
+  },
+  {
+    "symptom_type": "abnormal_execution_time",
+    "service": "BlockManager",
+    "event": "Putting block rdd_5_20 without replication took unexpectedly long",
+    "duration": "15639 ms",
+    "regex": "Putting block rdd_5_20 without replication took\\s+15639 ms",
+    "line": "521",
+    "timestamp": "25/06/05 21:02:41"
+  },
+  {
+    "symptom_type": "abnormal_execution_time",
+    "service": "BlockManager",
+    "event": "Putting block rdd_5_19 without replication took unexpectedly long",
+    "duration": "19098 ms",
+    "regex": "Putting block rdd_5_19 without replication took\\s+19098 ms",
+    "line": "648",
+    "timestamp": "25/06/05 21:02:45"
+  },
+  {
     "symptom_type": "excessive_resource_usage",
     "service": "MemoryStore",
-    "event": "Not enough space to cache rdd_5_21 in memory",
+    "event": "Not enough space to cache rdd in memory",
     "resource_type": "memory",
     "usage_value": "278.5 MB",
-    "regex": "Not enough space to cache rdd_5_21 in memory",
+    "regex": "WARN MemoryStore: Not enough space to cache rdd_5_21 in memory",
     "line": "30",
     "timestamp": "25/06/05 21:02:31"
   },
   {
     "symptom_type": "excessive_resource_usage",
     "service": "MemoryStore",
-    "event": "Not enough space to cache rdd_5_24 in memory",
+    "event": "Not enough space to cache rdd in memory",
     "resource_type": "memory",
     "usage_value": "278.5 MB",
-    "regex": "Not enough space to cache rdd_5_24 in memory",
+    "regex": "WARN MemoryStore: Not enough space to cache rdd_5_24 in memory",
     "line": "45",
     "timestamp": "25/06/05 21:02:31"
   },
   {
     "symptom_type": "excessive_resource_usage",
     "service": "MemoryStore",
-    "event": "Not enough space to cache rdd_5_23 in memory",
+    "event": "Not enough space to cache rdd in memory",
     "resource_type": "memory",
     "usage_value": "278.5 MB",
-    "regex": "Not enough space to cache rdd_5_23 in memory",
+    "regex": "WARN MemoryStore: Not enough space to cache rdd_5_23 in memory",
     "line": "60",
     "timestamp": "25/06/05 21:02:31"
   }

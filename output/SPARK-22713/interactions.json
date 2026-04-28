@@ -6,7 +6,7 @@
       "line": "1"
     },
     "operation_a": {
-      "value": "submit application",
+      "value": "Received application submission",
       "regex": "Received application submission",
       "line": "1",
       "timestamp": "25/06/05 21:02:08"
@@ -17,14 +17,14 @@
       "line": "3"
     },
     "operation_b": {
-      "value": "application submission",
-      "regex": "Application .* is submitted",
+      "value": "Application submission processing",
+      "regex": "is submitted with queue",
       "line": "3",
       "timestamp": "25/06/05 21:02:08"
     },
     "resource": {
       "value": "application_1749157329_0001",
-      "regex": "application_\\d+_\\d+",
+      "regex": "application_\\d{10}_\\d{4}",
       "line": "1",
       "timestamp": "25/06/05 21:02:08"
     }
@@ -33,40 +33,40 @@
     "service_a": {
       "value": "YARN",
       "regex": "ResourceManager",
-      "line": "1"
+      "line": "9"
     },
     "operation_a": {
-      "value": "add application attempt",
-      "regex": "Added application attempt",
-      "line": "4",
-      "timestamp": "25/06/05 21:02:08"
+      "value": "Container resource allocation completed",
+      "regex": "Container resource allocation completed",
+      "line": "9",
+      "timestamp": "25/06/05 21:02:09"
     },
     "service_b": {
-      "value": "YARN",
-      "regex": "ResourceScheduler",
-      "line": "6"
+      "value": "Spark",
+      "regex": "Executor",
+      "line": "10"
     },
     "operation_b": {
-      "value": "allocate container",
-      "regex": "Allocating container",
-      "line": "6",
+      "value": "Starting executor",
+      "regex": "Starting executor ID",
+      "line": "10",
       "timestamp": "25/06/05 21:02:09"
     },
     "resource": {
-      "value": "container_1749157329_0001_01_000001",
-      "regex": "container_\\d+_\\d+_\\d+_\\d+",
-      "line": "6",
+      "value": "executor",
+      "regex": "executor ID",
+      "line": "10",
       "timestamp": "25/06/05 21:02:09"
     }
   },
   {
     "service_a": {
-      "value": "YARN",
+      "value": "Spark",
       "regex": "YarnClientSchedulerBackend",
       "line": "149"
     },
     "operation_a": {
-      "value": "connect to ResourceManager",
+      "value": "Connecting to ResourceManager",
       "regex": "Connecting to ResourceManager",
       "line": "149",
       "timestamp": "25/06/05 21:02:09"
@@ -74,48 +74,48 @@
     "service_b": {
       "value": "YARN",
       "regex": "ResourceManager",
-      "line": "149"
+      "line": "150"
     },
     "operation_b": {
-      "value": "receive container allocation",
-      "regex": "Received container allocation from YARN",
+      "value": "Received container allocation",
+      "regex": "Received container allocation",
       "line": "150",
       "timestamp": "25/06/05 21:02:09"
     },
     "resource": {
       "value": "container_1749157329_0001_01_000001",
-      "regex": "container_\\d+_\\d+_\\d+_\\d+",
+      "regex": "container_\\d{10}_\\d{4}_\\d{2}_\\d{6}",
       "line": "150",
       "timestamp": "25/06/05 21:02:09"
     }
   },
   {
     "service_a": {
-      "value": "YARN",
-      "regex": "YarnClientSchedulerBackend",
-      "line": "151"
+      "value": "Netty",
+      "regex": "NettyBlockTransferService",
+      "line": "12"
     },
     "operation_a": {
-      "value": "launch executor",
-      "regex": "Launching executor",
-      "line": "151",
+      "value": "Started service",
+      "regex": "Successfully started service",
+      "line": "12",
       "timestamp": "25/06/05 21:02:09"
     },
     "service_b": {
       "value": "Spark",
-      "regex": "NettyRpcEndpointRef",
-      "line": "152"
+      "regex": "BlockManagerMaster",
+      "line": "14"
     },
     "operation_b": {
-      "value": "register executor",
-      "regex": "Registered executor",
-      "line": "152",
+      "value": "Registering BlockManager",
+      "regex": "Registering BlockManager",
+      "line": "14",
       "timestamp": "25/06/05 21:02:09"
     },
     "resource": {
-      "value": "Executor",
-      "regex": "Executor",
-      "line": "152",
+      "value": "BlockManager",
+      "regex": "BlockManagerId\\(.*?\\)",
+      "line": "14",
       "timestamp": "25/06/05 21:02:09"
     }
   }
