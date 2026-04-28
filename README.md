@@ -31,9 +31,9 @@ Output files are written to `output/`:
 
 ## Example (`log/spark-21714.log`)
 
-**Dependency graph** (`output/SPARK-22713/dependency_graph.png`):
+**Visualization** (`output/SPARK-22713/timeline_chart.png`):
 
-![spark-21714 dependency graph](output/SPARK-22713/dependency_graph.png)
+![spark-21714 Service Interaction Graph](output/SPARK-22713/timeline_chart.png)
 
 **Extracted interactions** (`output/SPARK-22713/interactions.json`):
 
