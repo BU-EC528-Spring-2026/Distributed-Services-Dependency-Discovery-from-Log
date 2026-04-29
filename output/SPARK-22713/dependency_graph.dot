@@ -2,59 +2,74 @@
 digraph {
 	rankdir=LR
 	node [fillcolor=lightblue shape=box style="rounded,filled"]
-	YARN [label=YARN]
-	YARN -> YARN [label="op_a: Received application submission
+	ResourceManager [label=ResourceManager]
+	RMAppManager [label=RMAppManager]
+	ResourceManager -> RMAppManager [label="op_a: submit
 ts_a: 25/06/05 21:02:08
-op_b: Application submission processing
+op_b: receive_submission
 ts_b: 25/06/05 21:02:08
 res: application_1749157329_0001"]
-	Spark [label=Spark]
-	YARN -> Spark [label="op_a: Container resource allocation completed
+	ResourceScheduler [label=ResourceScheduler]
+	RMAppManager -> ResourceScheduler [label="op_a: queue_application
+ts_a: 25/06/05 21:02:08
+op_b: add_to_scheduler
+ts_b: 25/06/05 21:02:08
+res: appattempt_1749157329_0001_000001"]
+	RMContainerAllocator [label=RMContainerAllocator]
+	ResourceScheduler -> RMContainerAllocator [label="op_a: allocate_container
 ts_a: 25/06/05 21:02:09
-op_b: Starting executor
-ts_b: 25/06/05 21:02:09
-res: executor"]
-	Spark -> YARN [label="op_a: Connecting to ResourceManager
-ts_a: 25/06/05 21:02:09
-op_b: Received container allocation
+op_b: assign_container
 ts_b: 25/06/05 21:02:09
 res: container_1749157329_0001_01_000001"]
-	Netty [label=Netty]
-	Netty -> Spark [label="op_a: Started service
+	Executor [label=Executor]
+	RMContainerAllocator -> Executor [label="op_a: assign_to_node
 ts_a: 25/06/05 21:02:09
-op_b: Registering BlockManager
+op_b: start_executor
 ts_b: 25/06/05 21:02:09
-res: BlockManager"]
+res: driver"]
+	NettyBlockTransferService [label=NettyBlockTransferService]
+	Executor -> NettyBlockTransferService [label="op_a: start_executor
+ts_a: 25/06/05 21:02:09
+op_b: start_service
+ts_b: 25/06/05 21:02:09
+res: NettyBlockTransferService"]
+	YarnClientSchedulerBackend [label=YarnClientSchedulerBackend]
+	YarnClientSchedulerBackend -> ResourceManager [label="op_a: connect_to_rm
+ts_a: 25/06/05 21:02:09
+op_b: receive_connection
+ts_b: 25/06/05 21:02:08
+res: resource_manager_connection"]
+	YarnClientSchedulerBackend -> Executor [label="op_a: launch_executor
+ts_a: 25/06/05 21:02:09
+op_b: register_executor
+ts_b: 25/06/05 21:02:09
+res: container_1749157329_0001_01_000001"]
 	symptom_0 [label="[error_exception]
 Exception in task 16.0 in stage 1.0 (..." fillcolor=lightcoral shape=ellipse style=filled]
-	YARN -> symptom_0 [label="consequence
-(The exception in the Spark Executor likely results...)" color=gray40 style=dashed]
-	symptom_1 [label="[error_exception]
-Futures timed out after [10 seconds]...." fillcolor=lightcoral shape=ellipse style=filled]
-	Spark -> symptom_1 [label="consequence
-(The timeout event in Spark RPC suggests connectivi...)" color=gray40 style=dashed]
-	symptom_2 [label="[abnormal_execution_time]
-Putting block rdd_5_22 without replic..." fillcolor=lightyellow shape=ellipse style=filled]
-	Netty -> symptom_2 [label="consequence
-(The long duration for block management is likely d...)" color=gray40 style=dashed]
-	symptom_3 [label="[abnormal_execution_time]
-Putting block rdd_5_20 without replic..." fillcolor=lightyellow shape=ellipse style=filled]
-	Netty -> symptom_3 [label="consequence
-(BlockManager's prolonged operation is connected to...)" color=gray40 style=dashed]
-	symptom_4 [label="[abnormal_execution_time]
-Putting block rdd_5_19 without replic..." fillcolor=lightyellow shape=ellipse style=filled]
-	Netty -> symptom_4 [label="consequence
-(The interaction of Netty service setup and Spark B...)" color=gray40 style=dashed]
+	Executor -> symptom_0 [label="consequence
+(The symptom occurred in the Executor service, whic...)" color=gray40 style=dashed]
+	symptom_1 [label="[abnormal_execution_time]
+Error sending message due to timeout" fillcolor=lightyellow shape=ellipse style=filled]
+	Executor -> symptom_1 [label="consequence
+(The symptom involves Netty, which is part of Netty...)" color=gray40 style=dashed]
+	symptom_2 [label="[excessive_resource_usage]
+Not enough space to cache rdd_5_21 in..." fillcolor=orange shape=ellipse style=filled]
+	YarnClientSchedulerBackend -> symptom_2 [label="consequence
+(The excessive resource usage in MemoryStore could ...)" color=gray40 style=dashed]
+	symptom_3 [label="[excessive_resource_usage]
+Not enough space to cache rdd_5_24 in..." fillcolor=orange shape=ellipse style=filled]
+	YarnClientSchedulerBackend -> symptom_3 [label="consequence
+(The issue arose likely due to parallel task execut...)" color=gray40 style=dashed]
+	symptom_4 [label="[excessive_resource_usage]
+Not enough space to cache rdd_5_23 in..." fillcolor=orange shape=ellipse style=filled]
+	YarnClientSchedulerBackend -> symptom_4 [label="consequence
+(The symptom is linked to Executor's operations man...)" color=gray40 style=dashed]
 	symptom_5 [label="[excessive_resource_usage]
-Not enough space to cache rdd in memory" fillcolor=orange shape=ellipse style=filled]
-	Netty -> symptom_5 [label="consequence
-(The memory shortage in caching RDDs is linked to t...)" color=gray40 style=dashed]
+Not enough space to cache rdd_5_27 in..." fillcolor=orange shape=ellipse style=filled]
+	YarnClientSchedulerBackend -> symptom_5 [label="consequence
+(The MemoryStore was overwhelmed as a direct result...)" color=gray40 style=dashed]
 	symptom_6 [label="[excessive_resource_usage]
-Not enough space to cache rdd in memory" fillcolor=orange shape=ellipse style=filled]
-	Netty -> symptom_6 [label="consequence
-(The excessive resource usage by MemoryStore is rel...)" color=gray40 style=dashed]
-	symptom_7 [label="[excessive_resource_usage]
-Not enough space to cache rdd in memory" fillcolor=orange shape=ellipse style=filled]
-	Netty -> symptom_7 [label="consequence
-(This event points to a high memory usage level cau...)" color=gray40 style=dashed]
+Not enough space to cache rdd_5_15 in..." fillcolor=orange shape=ellipse style=filled]
+	YarnClientSchedulerBackend -> symptom_6 [label="consequence
+(Executor's workload exceeded MemoryStore's limit, ...)" color=gray40 style=dashed]
 }

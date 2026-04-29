@@ -1,121 +1,211 @@
 [
   {
     "service_a": {
-      "value": "YARN",
-      "regex": "ResourceManager",
-      "line": "1"
+      "value": "ResourceManager",
+      "regex": "^ResourceManager$",
+      "line": "2"
     },
     "operation_a": {
-      "value": "Received application submission",
-      "regex": "Received application submission",
-      "line": "1",
+      "value": "submit",
+      "regex": "submit",
+      "line": "2",
       "timestamp": "25/06/05 21:02:08"
     },
     "service_b": {
-      "value": "YARN",
-      "regex": "RMAppManager",
+      "value": "RMAppManager",
+      "regex": "^RMAppManager$",
       "line": "3"
     },
     "operation_b": {
-      "value": "Application submission processing",
-      "regex": "is submitted with queue",
+      "value": "receive_submission",
+      "regex": "is submitted",
       "line": "3",
       "timestamp": "25/06/05 21:02:08"
     },
     "resource": {
       "value": "application_1749157329_0001",
-      "regex": "application_\\d{10}_\\d{4}",
+      "regex": "application_\\d+_\\d+",
+      "line": "3",
+      "timestamp": "25/06/05 21:02:08"
+    }
+  },
+  {
+    "service_a": {
+      "value": "RMAppManager",
+      "regex": "^RMAppManager$",
+      "line": "3"
+    },
+    "operation_a": {
+      "value": "queue_application",
+      "regex": "is submitted with queue",
+      "line": "3",
+      "timestamp": "25/06/05 21:02:08"
+    },
+    "service_b": {
+      "value": "ResourceScheduler",
+      "regex": "^ResourceScheduler$",
+      "line": "4"
+    },
+    "operation_b": {
+      "value": "add_to_scheduler",
+      "regex": "Added application attempt",
+      "line": "4",
+      "timestamp": "25/06/05 21:02:08"
+    },
+    "resource": {
+      "value": "appattempt_1749157329_0001_000001",
+      "regex": "appattempt_\\d+_\\d+_\\d+",
+      "line": "4",
+      "timestamp": "25/06/05 21:02:08"
+    }
+  },
+  {
+    "service_a": {
+      "value": "ResourceScheduler",
+      "regex": "^ResourceScheduler$",
+      "line": "6"
+    },
+    "operation_a": {
+      "value": "allocate_container",
+      "regex": "Allocating container",
+      "line": "6",
+      "timestamp": "25/06/05 21:02:09"
+    },
+    "service_b": {
+      "value": "RMContainerAllocator",
+      "regex": "^RMContainerAllocator$",
+      "line": "8"
+    },
+    "operation_b": {
+      "value": "assign_container",
+      "regex": "Assigned container",
+      "line": "8",
+      "timestamp": "25/06/05 21:02:09"
+    },
+    "resource": {
+      "value": "container_1749157329_0001_01_000001",
+      "regex": "container_\\d+_\\d+_\\d+_\\d+",
+      "line": "6",
+      "timestamp": "25/06/05 21:02:09"
+    }
+  },
+  {
+    "service_a": {
+      "value": "RMContainerAllocator",
+      "regex": "^RMContainerAllocator$",
+      "line": "8"
+    },
+    "operation_a": {
+      "value": "assign_to_node",
+      "regex": "to node",
+      "line": "8",
+      "timestamp": "25/06/05 21:02:09"
+    },
+    "service_b": {
+      "value": "Executor",
+      "regex": "^Executor$",
+      "line": "10"
+    },
+    "operation_b": {
+      "value": "start_executor",
+      "regex": "Starting executor",
+      "line": "10",
+      "timestamp": "25/06/05 21:02:09"
+    },
+    "resource": {
+      "value": "driver",
+      "regex": "driver",
+      "line": "10",
+      "timestamp": "25/06/05 21:02:09"
+    }
+  },
+  {
+    "service_a": {
+      "value": "Executor",
+      "regex": "^Executor$",
+      "line": "10"
+    },
+    "operation_a": {
+      "value": "start_executor",
+      "regex": "Starting executor",
+      "line": "10",
+      "timestamp": "25/06/05 21:02:09"
+    },
+    "service_b": {
+      "value": "NettyBlockTransferService",
+      "regex": "^NettyBlockTransferService$",
+      "line": "12"
+    },
+    "operation_b": {
+      "value": "start_service",
+      "regex": "Successfully started service",
+      "line": "12",
+      "timestamp": "25/06/05 21:02:09"
+    },
+    "resource": {
+      "value": "NettyBlockTransferService",
+      "regex": "NettyBlockTransferService",
+      "line": "12",
+      "timestamp": "25/06/05 21:02:09"
+    }
+  },
+  {
+    "service_a": {
+      "value": "YarnClientSchedulerBackend",
+      "regex": "^YarnClientSchedulerBackend$",
+      "line": "149"
+    },
+    "operation_a": {
+      "value": "connect_to_rm",
+      "regex": "Connecting to ResourceManager",
+      "line": "149",
+      "timestamp": "25/06/05 21:02:09"
+    },
+    "service_b": {
+      "value": "ResourceManager",
+      "regex": "^ResourceManager$",
+      "line": "1"
+    },
+    "operation_b": {
+      "value": "receive_connection",
+      "regex": "Received application submission",
+      "line": "1",
+      "timestamp": "25/06/05 21:02:08"
+    },
+    "resource": {
+      "value": "resource_manager_connection",
+      "regex": "ResourceManager",
       "line": "1",
       "timestamp": "25/06/05 21:02:08"
     }
   },
   {
     "service_a": {
-      "value": "YARN",
-      "regex": "ResourceManager",
-      "line": "9"
+      "value": "YarnClientSchedulerBackend",
+      "regex": "^YarnClientSchedulerBackend$",
+      "line": "151"
     },
     "operation_a": {
-      "value": "Container resource allocation completed",
-      "regex": "Container resource allocation completed",
-      "line": "9",
+      "value": "launch_executor",
+      "regex": "Launching executor",
+      "line": "151",
       "timestamp": "25/06/05 21:02:09"
     },
     "service_b": {
-      "value": "Spark",
-      "regex": "Executor",
-      "line": "10"
+      "value": "Executor",
+      "regex": "^Executor$",
+      "line": "152"
     },
     "operation_b": {
-      "value": "Starting executor",
-      "regex": "Starting executor ID",
-      "line": "10",
-      "timestamp": "25/06/05 21:02:09"
-    },
-    "resource": {
-      "value": "executor",
-      "regex": "executor ID",
-      "line": "10",
-      "timestamp": "25/06/05 21:02:09"
-    }
-  },
-  {
-    "service_a": {
-      "value": "Spark",
-      "regex": "YarnClientSchedulerBackend",
-      "line": "149"
-    },
-    "operation_a": {
-      "value": "Connecting to ResourceManager",
-      "regex": "Connecting to ResourceManager",
-      "line": "149",
-      "timestamp": "25/06/05 21:02:09"
-    },
-    "service_b": {
-      "value": "YARN",
-      "regex": "ResourceManager",
-      "line": "150"
-    },
-    "operation_b": {
-      "value": "Received container allocation",
-      "regex": "Received container allocation",
-      "line": "150",
+      "value": "register_executor",
+      "regex": "Registered executor",
+      "line": "152",
       "timestamp": "25/06/05 21:02:09"
     },
     "resource": {
       "value": "container_1749157329_0001_01_000001",
-      "regex": "container_\\d{10}_\\d{4}_\\d{2}_\\d{6}",
-      "line": "150",
-      "timestamp": "25/06/05 21:02:09"
-    }
-  },
-  {
-    "service_a": {
-      "value": "Netty",
-      "regex": "NettyBlockTransferService",
-      "line": "12"
-    },
-    "operation_a": {
-      "value": "Started service",
-      "regex": "Successfully started service",
-      "line": "12",
-      "timestamp": "25/06/05 21:02:09"
-    },
-    "service_b": {
-      "value": "Spark",
-      "regex": "BlockManagerMaster",
-      "line": "14"
-    },
-    "operation_b": {
-      "value": "Registering BlockManager",
-      "regex": "Registering BlockManager",
-      "line": "14",
-      "timestamp": "25/06/05 21:02:09"
-    },
-    "resource": {
-      "value": "BlockManager",
-      "regex": "BlockManagerId\\(.*?\\)",
-      "line": "14",
+      "regex": "container_\\d+_\\d+_\\d+_\\d+",
+      "line": "151",
       "timestamp": "25/06/05 21:02:09"
     }
   }
